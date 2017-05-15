@@ -46,13 +46,10 @@ dependencies:
   - token
   - views
   - views_ui
-<<<<<<< HEAD
-  - presto_contact
-=======
   - view_mode_selector
   - layout_discovery
   - presto_components
->>>>>>> 8.x-1.x
+  - presto_contact
 themes:
   - bartik
   - seven
