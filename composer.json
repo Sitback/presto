@@ -40,6 +40,8 @@
         "drupal/admin_toolbar": "^1.19",
         "drupal/big_pipe_sessionless": "^1.0",
         "drupal/console": "~1.0",
+        "drupal/contact_block": "^1.4",
+        "drupal/contact_storage": "^1.0@beta",
         "drupal/context": "^1.0@alpha",
         "drupal/core": "~8.3.2",
         "drupal/memcache": "^2.0@alpha",

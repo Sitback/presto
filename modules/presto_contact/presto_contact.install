@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the prest_contact module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function presto_contact_install() {
+  // Create node contact, then we can configure contactblock to be displayed
+  // in the page.
+  $node = Node::create(['type' => 'page']);
+  $node->set('title', 'Contact us');
+  $node->set('path', ['alias' => '/contact']);
+  $node->save();
+}

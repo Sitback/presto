@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Contains presto_contact.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\node\Entity\Node;
+
+/**
+ * Implements hook_help().
+ */
+function presto_contact_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the presto_contact module.
+    case 'help.page.presto_contact':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Configuration for contact page.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+

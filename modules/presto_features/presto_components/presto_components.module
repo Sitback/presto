@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains presto_component_image.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function presto_component_image_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the presto_component_image module.
+    case 'help.page.presto_component_image':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides the copnfiguration for the paragraph type Image.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function presto_component_image_theme() {
+  return [
+    'presto_component_image' => [
+      'render element' => 'children',
+    ],
+  ];
+}
