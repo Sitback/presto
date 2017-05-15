@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.feedback
+  module:
+    - contact_block
+    - system
+  theme:
+    - bartik
+id: contactblock
+theme: bartik
+region: content
+weight: 2
+provider: null
+plugin: contact_block
+settings:
+  id: contact_block
+  label: 'Contact block'
+  provider: contact_block
+  label_display: '0'
+  contact_form: feedback
+visibility:
+  request_path:
+    id: request_path
+    pages: /contact
+    negate: false
+    context_mapping: {  }

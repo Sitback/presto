@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the prest_contact module.
+ */
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+use Drupal\node\Entity\Node;
+
+/**
+ * Implements hook_install().
+ */
+function presto_contact_install() {
+  // Create node contact, then we can configure contactblock to be displayed
+  // in the page.
+  $node = Node::create(['type' => 'page']);
+  $node->set('title', 'Contact us');
+  $node->set('path', ['alias' => '/contact']);
+  $node->save();
+
+  // Create menu link.
+  $menuLink = MenuLinkContent::create([
+    'title' => 'Contact us',
+    'link' => [
+      'uri' => "internal:/node/{$node->id()}",
+    ],
+    'menu_name' => 'main',
+    'weight' => 20,
+    'expanded' => true,
+  ]);
+  $menuLink->save();
+}

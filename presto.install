@@ -5,9 +5,44 @@
  * Install, update and uninstall functions for the standard installation profile.
  */
 
+use Drupal\Core\Language\LanguageInterface;
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+use Drupal\node\Entity\Node;
 use Drupal\user\Entity\User;
 use Drupal\user\RoleInterface;
 use Drupal\shortcut\Entity\Shortcut;
+
+/**
+ * Creates the `/articles` page.
+ */
+function presto_create_articles_page() {
+  // Create node.
+  $node = Node::create([
+    'type' => 'page',
+    'title' => 'Articles',
+    'langcode' => LanguageInterface::LANGCODE_NOT_SPECIFIED,
+    'uid' => 1,
+    'status' => 1,
+    'field_fields' => [],
+  ]);
+  $node->save();
+
+  // Create pathauto alias.
+  Drupal::service('pathauto.generator')
+        ->updateEntityAlias($node, 'insert');
+
+  // Create menu link.
+  $menuLink = MenuLinkContent::create([
+    'title' => 'Articles',
+    'link' => [
+      'uri' => "internal:/node/{$node->id()}",
+    ],
+    'menu_name' => 'main',
+    'weight' => 10,
+    'expanded' => true,
+  ]);
+  $menuLink->save();
+}
 
 /**
  * Implements hook_install().
@@ -71,4 +106,7 @@ function presto_install() {
 
   // Enable the admin theme.
   \Drupal::configFactory()->getEditable('node.settings')->set('use_admin_theme', TRUE)->save(TRUE);
+
+  // Create the articles page.
+  presto_create_articles_page();
 }

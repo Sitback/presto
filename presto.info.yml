@@ -15,7 +15,8 @@ dependencies:
   - comment
   - config
   - contact
-  - context
+  - contact_block
+  - contact_storage
   - contextual
   - datetime
   - dblog
@@ -46,8 +47,11 @@ dependencies:
   - views_ui
   - view_mode_selector
   - layout_discovery
+  - google_analytics
+  - metatag
+  - simple_sitemap
   - presto_components
+  - presto_contact
 themes:
   - bartik
   - seven
-

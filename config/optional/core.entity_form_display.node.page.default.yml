@@ -2,9 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.page.body
     - field.field.node.page.field_body_paragraphs
+    - field.field.node.page.field_meta_tags
     - node.type.page
   module:
+    - metatag
     - paragraphs
     - path
 id: node.page.default
@@ -29,6 +32,12 @@ content:
       form_display_mode: default
       default_paragraph_type: _none
     third_party_settings: {  }
+    region: content
+  field_meta_tags:
+    weight: 33
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   path:
     type: path
@@ -67,4 +76,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  body: true

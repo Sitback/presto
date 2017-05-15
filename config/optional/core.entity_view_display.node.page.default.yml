@@ -2,10 +2,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.page.body
     - field.field.node.page.field_body_paragraphs
+    - field.field.node.page.field_meta_tags
     - node.type.page
   module:
     - entity_reference_revisions
+    - metatag
     - user
 id: node.page.default
 targetEntityType: node
@@ -21,7 +24,15 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
+  field_meta_tags:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
   links:
     weight: 101
     region: content
-hidden: {  }
+hidden:
+  body: true
