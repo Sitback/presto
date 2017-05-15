@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_line_options
+    - paragraphs.paragraphs_type.component_divider
+  module:
+    - options
+id: paragraph.component_divider.field_line_options
+field_name: field_line_options
+entity_type: paragraph
+bundle: component_divider
+label: 'Line Options'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: standard
+default_value_callback: ''
+settings: {  }
+field_type: list_string

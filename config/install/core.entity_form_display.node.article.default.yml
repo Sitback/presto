@@ -5,11 +5,13 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_image
+    - field.field.node.article.field_published_on
     - field.field.node.article.field_tags
     - image.style.thumbnail
     - node.type.article
   module:
     - comment
+    - datetime
     - image
     - path
     - text
@@ -47,6 +49,12 @@ content:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
+  field_published_on:
+    weight: 31
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
   field_tags:
     type: entity_reference_autocomplete_tags
     weight: 3

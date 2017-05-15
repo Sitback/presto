@@ -1,7 +1,7 @@
-name: Presto Component Image
-type: module
-description: Provides the copnfiguration for the paragraph type Image.
+name: Presto Components
 core: 8.x
-package: Presto (Configuration)
-dependencies:
-  - paragraphs
+type: module
+description: 'Paragraph Components.'
+version: '8.x-1.x-dev'
+distribution:
+  name: Presto (Configuration)

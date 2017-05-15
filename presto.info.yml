@@ -6,27 +6,29 @@ version: '8.x-1.x-dev'
 distribution:
   name: Presto
 dependencies:
+  - admin_toolbar
   - automated_cron
   - block
   - block_content
   - breakpoint
   - ckeditor
-  - color
   - comment
   - config
   - contact
   - contact_block
   - contact_storage
+  - context
   - contextual
   - datetime
   - dblog
+  - ds
   - dynamic_page_cache
   - editor
   - field_ui
   - file
   - help
-  - history
   - image
+  - layout_discovery
   - menu_link_content
   - menu_ui
   - node
@@ -34,17 +36,23 @@ dependencies:
   - page_cache
   - paragraphs
   - path
+  - pathauto
   - quickedit
   - rdf
-  - search
   - shortcut
+  - search
   - taxonomy
   - toolbar
-  - tour
+  - token
   - views
   - views_ui
+<<<<<<< HEAD
   - presto_contact
+=======
+  - view_mode_selector
+  - layout_discovery
+  - presto_components
+>>>>>>> 8.x-1.x
 themes:
   - bartik
   - seven
-

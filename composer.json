@@ -28,16 +28,28 @@
         ],
         "post-update-cmd": [
             "@composer package"
+        ],
+        "dev-update": [
+            "@composer update",
+            "rm -rf web/"
         ]
     },
     "require": {
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6",
+        "drupal/admin_toolbar": "^1.19",
+        "drupal/big_pipe_sessionless": "^1.0",
         "drupal/console": "~1.0",
         "drupal/contact_block": "^1.4",
         "drupal/contact_storage": "^1.0@beta",
+        "drupal/context": "^1.0@alpha",
         "drupal/core": "~8.3.2",
+        "drupal/memcache": "^2.0@alpha",
+        "drupal/ds": "^3.0",
         "drupal/paragraphs": "^1.1",
+        "drupal/pathauto": "^1.0",
+        "drupal/token": "^1.0",
+        "drupal/view_mode_selector": "1.x-dev",
         "drush/drush": "~8.0",
         "webflo/drupal-finder": "^0.3.0",
         "webmozart/path-util": "^2.3"

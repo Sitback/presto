@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_published_on
+    - node.type.article
+  module:
+    - datetime
+id: node.article.field_published_on
+field_name: field_published_on
+entity_type: node
+bundle: article
+label: 'Published On'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

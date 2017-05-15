@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: component_divider
+label: 'Component: Divider'
+behavior_plugins: {  }

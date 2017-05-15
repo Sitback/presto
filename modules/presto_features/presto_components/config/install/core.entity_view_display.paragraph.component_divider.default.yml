@@ -1,0 +1,46 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.component_divider.field_gototop_options
+    - field.field.paragraph.component_divider.field_heading_options
+    - field.field.paragraph.component_divider.field_line_options
+    - field.field.paragraph.component_divider.field_title_formatted
+    - paragraphs.paragraphs_type.component_divider
+  module:
+    - options
+    - text
+id: paragraph.component_divider.default
+targetEntityType: paragraph
+bundle: component_divider
+mode: default
+content:
+  field_gototop_options:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_heading_options:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_line_options:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_title_formatted:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

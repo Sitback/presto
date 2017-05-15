@@ -2,31 +2,34 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.body
+    - field.field.node.page.field_body_paragraphs
     - node.type.page
   module:
+    - paragraphs
     - path
-    - text
 id: node.page.default
 targetEntityType: node
 bundle: page
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 31
-    region: content
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_body_paragraphs:
+    type: paragraphs
+    weight: 32
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: preview
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
   path:
     type: path
     weight: 30

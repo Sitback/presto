@@ -70,11 +70,17 @@ class Package {
     }
     foreach ($make['projects'] as &$project) {
       if ($project['download']['type'] === 'git') {
-        $tag = $project['download']['tag'];
-        preg_match('/\d+\.x-\d+\.0/', $tag, $match);
-        $tag = str_replace($match, str_replace('x-', NULL, $match), $tag);
-        preg_match('/\d+\.\d+\.0/', $tag, $match);
-        $tag = str_replace($match, substr($match[0], 0, -2), $tag);
+        if (!array_key_exists('tag', $project['download'])) {
+          $tag = "{$project['download']['branch']}-dev";
+        }
+        else {
+          $tag = $project['download']['tag'];
+          preg_match('/\d+\.x-\d+\.0/', $tag, $match);
+          $tag = str_replace($match, str_replace('x-', NULL, $match), $tag);
+          preg_match('/\d+\.\d+\.0/', $tag, $match);
+          $tag = str_replace($match, substr($match[0], 0, -2), $tag);
+        }
+
         $project['version'] = $tag;
         unset($project['download']);
       }

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading_options
+    - paragraphs.paragraphs_type.component_divider
+  module:
+    - options
+id: paragraph.component_divider.field_heading_options
+field_name: field_heading_options
+entity_type: paragraph
+bundle: component_divider
+label: 'Heading Options'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string
