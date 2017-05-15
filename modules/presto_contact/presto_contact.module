@@ -24,20 +24,3 @@ function presto_contact_help($route_name, RouteMatchInterface $route_match) {
   }
 }
 
-
-/**
- * Implements hook_install().
- */
-function presto_contact_install() {
-  // Create node contact, then we can configure contactblock to be displayed
-  // in the page.
-  $node = Node::create(['type' => 'page']);
-  $node->set('title', 'Contact us');
-  $body = array(
-    'value' => 'Don\'t hesitate to contact us.',
-    'format' => 'basic_html',
-  );
-  //$node->set('body', $body);
-  $node->set('path', ['alias' => '/contact']);
-  $node->save();
-}
