@@ -83,7 +83,7 @@ Enabling eCommerce installs the following contributed modules:
 
 * Drupal Commerce (and its included modules)
 * Drupal Commerce Shipping
-* Physical
+* Physical Fields
 * Commerce Variation Cart Form
 
 ## Known Issues
