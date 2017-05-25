@@ -34,13 +34,30 @@ class PrestoConfigureForm extends FormBase {
       '#collapsible' => FALSE,
     ];
 
+    // Only enable commerce if this profile was installed via Composer
+    // (which is when the below interface will exist).
+    $enableCommerce = FALSE;
+    if (interface_exists('CommerceGuys\Intl\Currency\CurrencyInterface')) {
+      $enableCommerce = TRUE;
+    }
+
+    if (!$enableCommerce) {
+      $disabledMsg = $this->t('Unfortunately, eCommerce is only supported if you install Presto! via Composer due to packaging limitations on drupal.org. <a href=":url">See the README for more information on installing via Composer.</a>', [
+        ':url' => 'https://github.com/Sitback/presto#installing-presto',
+      ]);
+      $form['ecommerce']['disabled_info'] = [
+        '#type' => 'markup',
+        '#markup' => $disabledMsg,
+      ];
+    }
+
     $form['ecommerce']['enable_ecommerce'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Enable eCommerce'),
       '#description' => $this->t(
         'Enables Drupal Commerce and some sane defaults to help you kickstart your eCommerce site.'
       ),
-      '#default_value' => TRUE,
+      '#default_value' => $enableCommerce,
     ];
 
     $form['ecommerce']['ecommerce_install_demo_content'] = [
@@ -49,7 +66,7 @@ class PrestoConfigureForm extends FormBase {
       '#description' => $this->t(
         'Creates a few demo products to help you test your new eCommerce site.'
       ),
-      '#default_value' => TRUE,
+      '#default_value' => $enableCommerce,
       '#states' => [
         'visible' => [
           'input[name="enable_ecommerce"]' => [
