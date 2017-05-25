@@ -42,7 +42,7 @@ class PrestoConfigureForm extends FormBase {
     }
 
     if (!$enableCommerce) {
-      $disabledMsg = $this->t('Unfortunately, eCommerce is only supported if you install Presto! via Composer due to packaging limitations on drupal.org. <a href=":url">See the README for more information on installing via Composer.</a>', [
+      $disabledMsg = $this->t('<p><strong>Not supported.</strong></p><p>Unfortunately, eCommerce is only supported if you install Presto via Composer. <a href=":url">See the README for more information on installing via Composer.</a></p>', [
         ':url' => 'https://github.com/Sitback/presto#installing-presto',
       ]);
       $form['ecommerce']['disabled_info'] = [
