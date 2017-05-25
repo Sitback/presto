@@ -12,6 +12,8 @@ The recommended way to install Presto is to use our [Composer project scaffoldin
 composer create-project sitback/presto-project MYPROJECT --stability dev --no-interaction
 ```
 
+You can also [download a pre-packaged tarball off drupal.org](https://www.drupal.org/project/presto), however, due to limitations of the drupal.org packager, **installing eCommerce is not supported in this installation method**.
+
 ## Included in Presto
 
 ~~You can demo most of the below functionality on our demo site~~ (coming soon!)
