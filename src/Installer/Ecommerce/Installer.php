@@ -15,8 +15,12 @@ class Installer {
   const DEPENDENCY_TYPE_MODULE = 'module';
   const DEPENDENCY_TYPE_THEME = 'theme';
 
-  // All eCommerce dependencies.
-  const REQUIRED_DEPENDENCIES = [
+  /**
+   * All eCommerce dependencies.
+   *
+   * @var array
+   */
+  private $dependencies = [
     'commerce' => self::DEPENDENCY_TYPE_MODULE,
     'commerce_order' => self::DEPENDENCY_TYPE_MODULE,
     'commerce_price' => self::DEPENDENCY_TYPE_MODULE,
@@ -128,7 +132,7 @@ class Installer {
   private function addDependencyOperations() {
     $operations = [];
 
-    foreach (static::REQUIRED_DEPENDENCIES as $module => $type) {
+    foreach ($this->dependencies as $module => $type) {
       $operations[] = [
         [static::class, 'installDependency'],
         [
