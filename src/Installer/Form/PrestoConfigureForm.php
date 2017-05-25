@@ -57,6 +57,7 @@ class PrestoConfigureForm extends FormBase {
       '#description' => $this->t(
         'Enables Drupal Commerce and some sane defaults to help you kickstart your eCommerce site.'
       ),
+      '#disabled' => !$enableCommerce,
       '#default_value' => $enableCommerce,
     ];
 
@@ -66,6 +67,7 @@ class PrestoConfigureForm extends FormBase {
       '#description' => $this->t(
         'Creates a few demo products to help you test your new eCommerce site.'
       ),
+      '#disabled' => !$enableCommerce,
       '#default_value' => $enableCommerce,
       '#states' => [
         'visible' => [
