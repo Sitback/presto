@@ -25,8 +25,8 @@ before_install:
   - composer --version
 
 install:
-  - echo $PHP_VERSION
-  - composer --verbose install
+  - if [[ $PHP_VERSION = 55 ]]; then composer --verbose install --no-dev; fi;
+  - if [[ $PHP_VERSION != 55 ]]; then composer --verbose install; fi;
 
 script:
   - if [[ $RELEASE = dev ]]; then composer --verbose update; fi;
