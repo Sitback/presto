@@ -22,3 +22,15 @@ function presto_commerce_help($route_name, RouteMatchInterface $route_match) {
     default:
   }
 }
+
+/**
+ * Implements theme_hook().
+ */
+function presto_commerce_theme($existing, $type, $theme, $path) {
+  return [
+    'commerce_checkout_completion_message' => [
+      'template' => 'commerce-checkout-completion-message',
+      'base hook' => 'commerce_checkout_completion_message',
+    ],
+  ];
+}
