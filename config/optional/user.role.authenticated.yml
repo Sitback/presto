@@ -18,3 +18,5 @@ permissions:
   - 'skip comment approval'
   - 'use text format basic_html'
   - 'view media'
+  - 'view own commerce_order'
+
