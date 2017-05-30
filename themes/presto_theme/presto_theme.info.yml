@@ -7,11 +7,22 @@ core: 8.x
 base theme: bootstrap
 
 libraries:
+  - presto_theme/lity
   - presto_theme/global-styling
 
 regions:
-  content: Content
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  header: 'Top Bar'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer: 'Footer'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
 
-libraries-override:
-  bootstrap/tooltip: false
-  bootstrap/popover: false
+#libraries-override:
+#  bootstrap/tooltip: false
+#  bootstrap/popover: false

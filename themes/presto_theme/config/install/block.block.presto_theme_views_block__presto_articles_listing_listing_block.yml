@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.presto_articles_listing
+  module:
+    - system
+    - views
+  theme:
+    - presto_theme
+id: presto_theme_views_block__presto_articles_listing_listing_block
+theme: presto_theme
+region: content
+weight: -2
+provider: null
+plugin: 'views_block:presto_articles_listing-listing_block'
+settings:
+  id: 'views_block:presto_articles_listing-listing_block'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /articles
+    negate: false
+    context_mapping: {  }

@@ -1,18 +1,80 @@
-/*
-Palette generated via http://paletton.com/#uid=75f0X0kllllhHmHjwm1nakEoZjZ
-*/
+$heroPrimary: #820263;
+$heroSecondary: #2E294E;
+$heroTertiary: #D90368;
+$heroQuarternary: #FFD400;
+$heroQuintenary: #EAEAEA;
 
-$heroPrimary: #8E2F5C;
-$heroSecondary: #AA7139;
-$heroTertiary: #255c69;
-$heroQuarternary: #749D34;
+/* Coolors Exported Palette - coolors.co/50514f-f25f5c-ffe066-247ba0-70c1b3 */
+
+/* RGB */
+$color1: rgba(80, 81, 79, 1);
+$color2: rgba(242, 95, 92, 1);
+$color3: rgba(255, 224, 102, 1);
+$color4: rgba(36, 123, 160, 1);
+$color5: rgba(112, 193, 179, 1);
+
+/* RGB */
+$color1: rgba(85, 221, 224, 1);
+$color2: rgba(51, 101, 138, 1);
+$color3: rgba(47, 72, 88, 1);
+$color4: rgba(246, 174, 45, 1);
+$color5: rgba(242, 100, 25, 1);
+
+$white: #fff;
+$black: #333;
+$grey: #aaa;
+$light-grey: #f2f2f2;
+
+
+$darkLiver: $color1;
+$sunset-orange: $color2;
+$mustard: $color3;
+$lapis-lazuli: $color4;
+$green-sheen: $color5;
+
+$textColor: $black;
 
 $linkColor: $heroTertiary;
 $linkColorHover: $heroSecondary;
+$linkColorInverted: $white;
+$linkColorHoverInverted: $heroSecondary;
 
-$dividerColor: #aaa;
+$dividerColor: $grey;
 
 $dividerLinkColor: $linkColor;
 $dividerLinkColorHover: $linkColorHover;
 
+$mainMenuBackground: $heroQuintenary;
+$mainMenuLinkColor: $heroSecondary;
+$mainMenuLinkColorHover: $heroTertiary;
+$mainMenuLinkBorderColor: transparent;
+$mainMenuLinkBorderColorActive: $heroTertiary;
+$mainMenuLinkBorderColorHover: $heroQuarternary;
+$mainMenuBorderColor: $heroPrimary;
 
+$siteButtonTextColor: $white;
+$siteButtonBorderColor: $heroPrimary;
+$siteButtonArrowColor: $white;
+$siteButtonBackgroundColor: $heroPrimary;
+$siteButtonTextColorHover: $heroPrimary;
+$siteButtonBorderColorHover: $heroPrimary;
+$siteButtonArrowColorHover: $heroPrimary;
+$siteButtonBackgroundColorHover: $white;
+
+$promobarBackgroundColor: $heroTertiary;
+$promobarBackgroundColorHover: lighten($heroTertiary, .2);
+$promobarTextColor: $white;
+$promobarLinkColor: $linkColorInverted;
+$promobarLinkColorHover: $linkColorHoverInverted;
+
+$promobarButtonTextColor: $white;
+$promobarButtonBorderColor: $white;
+$promobarButtonArrowColor: $white;
+$promobarButtonBackgroundColor: transparent;
+$promobarButtonTextColorHover: $white;
+$promobarButtonBorderColorHover: $heroSecondary;
+$promobarButtonArrowColorHover: $white;
+$promobarButtonBackgroundColorHover: $heroSecondary;
+
+$footerLink: $white;
+$footerLinkHover: $heroQuarternary;

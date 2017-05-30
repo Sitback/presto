@@ -17,7 +17,7 @@ content:
     label: above
     settings:
       vanilla: true
-      optionset: default
+      optionset: presto_slideshow
       optionset_thumbnail: ''
       skin: default
       skin_thumbnail: ''

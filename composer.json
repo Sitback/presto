@@ -71,7 +71,9 @@
         "drupal/token": "^1.0",
         "drupal/video_embed_field": "^1.5",
         "drupal/view_mode_selector": "1.x-dev",
+        "npm-asset/blazy": "^1",
         "npm-asset/dropzone": "^4",
+        "npm-asset/lity": "^2",
         "npm-asset/slick-carousel": "^1"
     },
     "require-dev": {
@@ -153,6 +155,18 @@
                 "download": {
                     "type": "get",
                     "url": "https://github.com/enyo/dropzone/archive/v4.2.0.zip"
+                }
+            },
+            "npm-asset/blazy": {
+                "download": {
+                    "type": "get",
+                    "url": "https://github.com/dinbror/blazy/archive/1.8.2.zip"
+                }
+            },
+            "npm-asset/lity": {
+                "download": {
+                    "type": "get",
+                    "url": "https://github.com/jsor/lity/archive/v2.2.2.zip"
                 }
             }
         }

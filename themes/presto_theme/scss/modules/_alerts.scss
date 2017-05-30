@@ -1,0 +1,14 @@
+.alert {
+  @extend %container;
+  padding: 2em;
+  text-align: center;
+  font-size: 120%;
+
+  &.alert-success {
+    background: lightgreen;
+  }
+
+  &.alert-danger {
+    background: salmon;
+  }
+}

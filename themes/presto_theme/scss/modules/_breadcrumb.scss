@@ -1,0 +1,28 @@
+ol.breadcrumb {
+  @extend %container;
+  background: transparent;
+  margin-top: 10px;
+  margin-bottom: -45px;
+
+  > li {
+    font-family: $font-neuton;
+
+    a {
+      font-family: $font-neuton;
+      color: $linkColor;
+
+      &:hover {
+        color: $linkColorHover;
+        text-decoration: none;
+      }
+    }
+
+    + li {
+
+      &::before {
+        content: '::';
+        padding: 0 .2em;
+      }
+    }
+  }
+}

@@ -47,6 +47,7 @@ set classes = [
   'paragraph--type--' ~ paragraph.bundle|clean_class,
   view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
   content.field_variation['#items'].getString(),
+  'row',
 ]
 %}
 
@@ -62,52 +63,49 @@ set classes = [
 
 {% else %}
 
-  <div{{ attributes.addClass(classes) }}>
-    <section class="row fw-row">
-      <div class="spb-promo-wrap spb_content_element clearfix col-sm-12 bg-darkblue text-white">
+  <section{{ attributes.addClass(classes) }}>
+    <div class="clearfix col-xs-12">
+      <div class="{{ content.field_variation_promo_bar['#items'].getString() }}">
 
         {% if (content.field_variation_promo_bar['#items'].getString() == 'text_and_button' ) %}
-          <div class="sf-promo-bar promo-button">
-            {{ paragraph.fields.field_body.0.value|raw }}
+          <div class="container flex middle around  padding-vertical-medium">
+            <p class="promo-button-wrapper">
+              {{ link(paragraph.fields.field_link.0.value.title,
+                paragraph.fields.field_link.0.value.uri,
+                { 'class':['btn', 'btn-primary']} )
+              }}
+            </p>
 
-            {{ link(paragraph.fields.field_link.0.value.title,
-              paragraph.fields.field_link.0.value.uri,
-              { 'class':['button', 'sf-button','dropshadow', 'accent']} )
-            }}
+            {{ paragraph.fields.field_body.0.value|raw }}
           </div>
         {% endif %}
 
         {% if (content.field_variation_promo_bar['#items'].getString() == 'text_and_arrow' ) %}
-          <div class="sf-promo-bar promo-arrow">
             {% set link_title %}
               {{ paragraph.fields.field_body.0.value|raw }}
-              <i class="fglyphicon glyphicon-chevron-right"></i>
             {% endset %}
 
             {{ link(link_title,
               paragraph.fields.field_link.0.value.uri,
-              { 'class':['text-white']} )
+              { 'class':['text-white', 'full-bar', 'nav-arrow', 'container', 'padding-vertical-medium']} )
             }}
-          </div>
         {%  endif %}
 
         {% if (content.field_variation_promo_bar['#items'].getString() == 'text_only' ) %}
-          <div class="sf-promo-bar promo-text" >
             {% set link_title %}
               {{ paragraph.fields.field_body.0.value|raw }}
             {% endset %}
 
             {{ link(link_title,
             paragraph.fields.field_link.0.value.uri,
-            { 'class':['text-white']} )
+            { 'class':['text-white full-bar text-center container padding-vertical-large']} )
             }}
 
-          </div>
         {%  endif %}
-
       </div>
-    </section>
-  </div>
+
+    </div>
+  </section>
 
 {% endif %}
 

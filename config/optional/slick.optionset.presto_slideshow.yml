@@ -16,7 +16,7 @@ options:
     asNavFor: ''
     accessibility: true
     adaptiveHeight: false
-    autoplay: false
+    autoplay: true
     autoplaySpeed: 3000
     pauseOnHover: true
     pauseOnDotsHover: false
