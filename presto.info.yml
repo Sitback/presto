@@ -56,6 +56,7 @@ dependencies:
   - redirect
   - slick
   - slick_media
+  - swiftmailer
   - social_media
   - simple_sitemap
   - token
