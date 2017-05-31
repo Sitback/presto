@@ -72,7 +72,9 @@
         "drupal/video_embed_field": "^1.5",
         "drupal/view_mode_selector": "1.x-dev",
         "npm-asset/dropzone": "^4",
-        "npm-asset/slick-carousel": "^1"
+        "npm-asset/slick-carousel": "^1",
+        "drupal/swiftmailer": "^1.0@beta",
+        "swiftmailer/swiftmailer": "^5.4.8"
     },
     "require-dev": {
         "behat/mink": "~1.7",
@@ -154,6 +156,10 @@
                     "type": "get",
                     "url": "https://github.com/enyo/dropzone/archive/v4.2.0.zip"
                 }
+            },
+            "swiftmailer/swiftmailer": {
+                "key": "swiftmailer_lib",
+                "directory_name" : "swiftmailer"
             }
         }
     },
