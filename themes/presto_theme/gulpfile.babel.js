@@ -54,7 +54,6 @@ gulp.task('development', ['js', 'scss'], () => {
 
   gulp.watch(src.scss, ['scss']);
   gulp.watch(src.js, ['js']);
-  // gulp.watch('**/*.php', browserSync.reload);
 });
 
 
