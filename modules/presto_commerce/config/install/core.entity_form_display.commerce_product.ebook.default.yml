@@ -4,10 +4,20 @@ dependencies:
   config:
     - commerce_product.commerce_product_type.ebook
     - field.field.commerce_product.ebook.body
+    - field.field.commerce_product.ebook.field_category
+    - field.field.commerce_product.ebook.field_comments
+    - field.field.commerce_product.ebook.field_images
+    - field.field.commerce_product.ebook.field_regular_price
+    - field.field.commerce_product.ebook.field_tag
+    - field.field.commerce_product.ebook.field_thumbnail
     - field.field.commerce_product.ebook.stores
     - field.field.commerce_product.ebook.variations
+    - image.style.thumbnail
   module:
+    - comment
     - commerce
+    - commerce_price
+    - image
     - inline_entity_form
     - path
     - text
@@ -18,7 +28,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 1
+    weight: 2
     settings:
       rows: 9
       summary_rows: 3
@@ -27,19 +37,65 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_category:
+    type: entity_reference_autocomplete
+    weight: 8
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_comments:
+    type: comment_default
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_images:
+    type: image_image
+    weight: 9
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_regular_price:
+    type: commerce_price_default
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_tag:
+    type: entity_reference_autocomplete
+    weight: 11
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_thumbnail:
+    type: image_image
+    weight: 10
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   stores:
     type: commerce_entity_select
-    weight: -10
+    weight: 0
     settings:
       autocomplete_threshold: 7
       autocomplete_size: 60
@@ -48,7 +104,7 @@ content:
     region: content
   title:
     type: string_textfield
-    weight: -5
+    weight: 1
     region: content
     settings:
       size: 60
@@ -56,7 +112,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 3
     region: content
     settings:
       match_operator: CONTAINS
@@ -65,7 +121,7 @@ content:
     third_party_settings: {  }
   variations:
     type: inline_entity_form_complex
-    weight: 10
+    weight: 5
     settings:
       override_labels: true
       label_singular: variation

@@ -12,40 +12,42 @@ targetEntityType: commerce_product_variation
 bundle: ebook
 mode: default
 content:
-  attribute_ebook_format:
-    type: options_select
-    weight: 3
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   field_original_price:
-    weight: 2
+    weight: 1
+    label: hidden
     settings:
-      placeholder: '12.99'
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
     third_party_settings: {  }
-    type: number
+    type: number_decimal
     region: content
   price:
-    type: commerce_price_default
-    weight: 1
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  sku:
-    type: string_textfield
+    label: above
+    type: commerce_price_calculated
     weight: 0
     region: content
     settings:
-      size: 60
-      placeholder: ''
+      strip_trailing_zeroes: false
+      display_currency_code: false
     third_party_settings: {  }
-  status:
-    type: boolean_checkbox
-    weight: 4
+  sku:
+    label: hidden
+    type: string
+    weight: -4
     region: content
     settings:
-      display_label: true
+      link_to_entity: false
+    third_party_settings: {  }
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
 hidden:
-  created: true
-  uid: true
+  attribute_ebook_format: true
+  product_id: true
