@@ -67,4 +67,4 @@ dependencies:
   - presto_component_block
 themes:
   - bartik
-  - seven
+  - presto_theme

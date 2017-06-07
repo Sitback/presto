@@ -7,9 +7,9 @@ dependencies:
     - system
     - views
   theme:
-    - bartik
+    - presto_theme
 id: views_block__presto_product_listing_listing_block
-theme: bartik
+theme: presto_theme
 region: content
 weight: 10
 provider: null

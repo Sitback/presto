@@ -113,8 +113,22 @@ function presto_install() {
   user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, ['search content']);
   user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, ['search content']);
 
-  // Enable the admin theme.
-  Drupal::configFactory()->getEditable('node.settings')->set('use_admin_theme', TRUE)->save(TRUE);
+  // Enable presto_theme.
+  Drupal::service('theme_installer')
+    ->install(['presto_theme', 'seven']);
+
+  // Set presto_theme as default.
+  Drupal::configFactory()
+    ->getEditable('system.theme')
+    ->set('default', 'presto_theme')
+    ->save();
+
+  // Set seven as admin theme.
+  Drupal::configFactory()
+    ->getEditable('system.theme')
+    ->set('admin', 'seven')
+    ->save();
+
 
   // Create the articles page.
   presto_create_articles_page();

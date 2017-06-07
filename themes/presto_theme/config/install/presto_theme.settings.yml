@@ -1,0 +1,21 @@
+schemas:
+  bootstrap: 8000
+  presto_theme: 8000
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: ''
+  url: 'http://presto.docker/themes/contrib/bootstrap/favicon.ico'
+  use_default: 1
+features:
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+  node_user_picture: 1
+logo:
+  path: ''
+  url: ''
+  use_default: 1
+fluid_container: 1
+table_responsive: '-1'
+presto_theme_browsersync_enable: 0
+table: ''
