@@ -4,6 +4,13 @@ dependencies:
   config:
     - field.storage.node.field_body_paragraphs
     - node.type.page
+    - paragraphs.paragraphs_type.component_block
+    - paragraphs.paragraphs_type.component_divider
+    - paragraphs.paragraphs_type.component_icon_box_list
+    - paragraphs.paragraphs_type.component_image
+    - paragraphs.paragraphs_type.component_promo_bar
+    - paragraphs.paragraphs_type.component_slideshow
+    - paragraphs.paragraphs_type.component_textbox
   module:
     - entity_reference_revisions
 id: node.page.field_body_paragraphs
@@ -19,5 +26,37 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles: null
+    target_bundles:
+      component_block: component_block
+      component_divider: component_divider
+      component_icon_box_list: component_icon_box_list
+      component_image: component_image
+      component_promo_bar: component_promo_bar
+      component_slideshow: component_slideshow
+      component_textbox: component_textbox
+    target_bundles_drag_drop:
+      component_block:
+        enabled: true
+        weight: 9
+      component_divider:
+        enabled: true
+        weight: 10
+      component_icon_box:
+        weight: 11
+        enabled: false
+      component_icon_box_list:
+        enabled: true
+        weight: 12
+      component_image:
+        enabled: true
+        weight: 13
+      component_promo_bar:
+        enabled: true
+        weight: 14
+      component_slideshow:
+        enabled: true
+        weight: 15
+      component_textbox:
+        enabled: true
+        weight: 16
 field_type: entity_reference_revisions
