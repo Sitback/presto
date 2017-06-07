@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: component_icon_box
+label: 'Component: Icon Box'
+behavior_plugins: {  }
