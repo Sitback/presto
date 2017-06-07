@@ -38,17 +38,14 @@
  * @ingroup themeable
  */
 #}
-
-{% set iconBoxType = content.field_icon_box_type['#items'].getString() %}
-
 {%
 set classes = [
+  'clearfix',
   'paragraph',
   'paragraph--type--' ~ paragraph.bundle|clean_class,
   view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-  'icon-box-' ~ iconBoxType,
-  '.col-xs-12',
-  'col-sm',
+  'icon-box-list-' ~ content.field_icon_box['#items']|length ~ '-column',
+  'row'
 ]
 %}
 
@@ -63,20 +60,11 @@ set classes = [
   {% endblock paragraph %}
 
 {% else %}
+  {{ kint(content.field_icon_box['#items']|length) }}
 
   <div {{ attributes.addClass(classes) }}>
-    <div class="icon_box">
-      <div class="{{ iconBoxType }} ">
-        {% if (iconBoxType == 'Image') %}
-          {{ content.field_media }}
-        {% elseif(iconBoxType == 'Icon') %}
-          {# todo:  remove inline style. #}
-          <div style="font-size: 14.5em;" class="fa fa-{{ content.field_icon['#items'].getString() }}"></div>
-        {% endif %}
-      </div>
-      <div class="copy">
-       {{ content.field_body }}
-      </div>
+    <div class="">
+        {{ content }}
     </div>
   </div>
 
