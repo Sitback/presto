@@ -2,8 +2,8 @@
   margin-top: 2em;
   padding-top: 35px;
   padding-bottom: 36px;
-  background: $heroPrimary;
-  border-top: 2px solid $heroQuarternary;
+  background: $footerBackground;
+  border-top: 2px solid $footerBorderColor;
 
   .region-footer {
     @extend %container;
@@ -17,12 +17,12 @@
         line-height: 3;
 
         > a {
-          color: $footerLink;
+          color: $footerLinkColor;
           padding: 0;
 
           &:focus,
           &:hover {
-            color: $footerLinkHover;
+            color: $footerLinkColorHover;
             background: none;
           }
         }
@@ -47,11 +47,11 @@
         }
 
         a {
-          color: $footerLink;
+          color: $footerLinkColor;
           font-size: 40px;
 
           &:hover{
-            color: $footerLinkHover;
+            color: $footerLinkColorHover;
           }
 
           img {

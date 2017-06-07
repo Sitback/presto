@@ -8,13 +8,22 @@
   &.navbar-default {
 
     .navbar-header {
-      @extend .presto-container;
       margin-left: 15px;
       margin-right: 15px;
+      width: 100%;
+      display: block;
 
       @media only screen and (min-width: $screen-sm) {
         margin-left: -15px;
         margin-right: -15px;
+      }
+
+      .region-navigation {
+        @extend .clearfix;
+
+        nav {
+          float: right;
+        }
       }
     }
     .navbar-nav {
@@ -23,8 +32,10 @@
 
         > a {
           color: $mainMenuLinkColor;
-          border-bottom: 2px solid transparent;
+          border-bottom: 2px solid $mainMenuLinkBorderColor;
           margin-bottom: -2px;
+          padding-left: 2.5em;
+          padding-right: 2.5em;
 
           &.is-active {
             color: $mainMenuLinkColorHover;
@@ -34,10 +45,17 @@
           &:hover {
             color: $mainMenuLinkColorHover;
             border-bottom-color: $mainMenuLinkBorderColorHover;
+            background: $mainMenuBackgroundHover;
           }
         }
       }
     }
+  }
+}
+
+.navbar-right {
+  @media screen and (min-width: 768px) {
+    margin-right: 0;
   }
 }
 

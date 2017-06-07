@@ -1,6 +1,6 @@
-.button {
+
+.btn {
   position: relative;
-  padding: 1em 1.5em 1em 1.5em;
   text-align: left;
   display: inline-block;
   border: 1px solid $siteButtonBorderColor;
@@ -14,7 +14,12 @@
     background: $siteButtonBackgroundColorHover;
   }
 
+  .fa {
+    color: $siteButtonTextColor;
+  }
+
   &.navigation {
+    padding-right: 3em;
 
     &::after {
       font-size: 150%;
@@ -34,36 +39,5 @@
         color: $siteButtonArrowColorHover;
       }
     }
-  }
-
-  &.prosmobar {
-    border: 1px solid $promobarButtonBorderColor;
-    color: $promobarButtonTextColor;
-    background: $promobarButtonBackgroundColor;
-    padding-right: 3em;
-    transition: background .5s 0, border-color 1s 5s, color .5s 0;
-
-    &::after {
-      font-size: 150%;
-      content: '\f105';
-      font-family: 'FontAwesome';
-      display: block;
-      position: absolute;
-      right: 1em;
-      top: 50%;
-      transform: translateY(-50%);
-      color: $promobarButtonArrowColor;
-    }
-
-    &:hover {
-      color: $promobarButtonTextColorHover;
-      border-color: $promobarButtonBorderColorHover;
-      background: $promobarButtonBackgroundColorHover;
-
-      &::after {
-        color: $promobarButtonArrowColorHover;
-      }
-    }
-
   }
 }

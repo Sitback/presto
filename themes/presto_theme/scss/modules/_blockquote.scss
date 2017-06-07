@@ -2,10 +2,10 @@ blockquote {
   font-size: 100%;
   margin-left: 5em;
   margin-right: 5em;
-  border-left: 5px solid $heroQuintenary;
+  border-left: 5px solid $blockQuoteBorderColor;
 
 
   p {
-    color: $heroPrimary;
+    color: $blockQuoteColor;
   }
 }

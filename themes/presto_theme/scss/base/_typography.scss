@@ -1,23 +1,22 @@
-$font-neuton: 'Neuton', serif;
+$font-quattrocento: 'Quattrocento Sans', sans-serif;
 $font-open: 'Open Sans', sans-serif;
 
-$bodyText: $font-open;
-$headingText: $font-neuton;
+$bodyFont: $font-open;
+$headingFont: $font-quattrocento;
 
 body {
   * {
-    color: red;
-    font-family: $bodyText;
+    font-family: $bodyFont;
     color: $textColor;
   }
 
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $headingText;
+  font-family: $headingFont;
   font-weight: 400;
   * {
-    font-family: $font-neuton;
+    font-family: $headingFont;
   }
 }
 
@@ -48,5 +47,5 @@ h6 {
 
 .page-header {
   text-align: center;
-  font-family: $headingText;
+  font-family: $headingFont;
 }

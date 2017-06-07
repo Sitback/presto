@@ -1,0 +1,75 @@
+{#
+/**
+ * @file
+ *
+ * Default product template.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapper.
+ * - product: The rendered product fields.
+ *   Use 'product' to print them all, or print a subset such as
+ *   'product.title'. Use the following code to exclude the
+ *   printing of a given field:
+ *   @code
+ *   {{ product|without('title') }}
+ *   @endcode
+ * - product_entity: The product entity.
+ * - product_url: The product URL.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% set images = product_entity.field_images %}
+{% set thumbnail = product_entity.field_thumbnail %}
+
+{% set view_mode = product.title['#view_mode'] %}
+<div class="col-md-4 col-sm-6 col-xs-12 product product-item">
+
+  <div class="hidden">
+    {{ product.variations }}
+  </div>
+
+  <div class="product-listing-wrapper">
+    {% if product.field_regular_price|render|striptags|trim != '' %}
+      <a class="on-sale-tag" href="{{ product_url }}">
+        <span class="onsale">Sale!</span>
+      </a>
+    {% endif %}
+    <div class="product-listing-action-wrapper">
+      <div class="add-to-cart-wrapper">
+        <a class="add-to-cart" data-action="cart">
+          <i class="fa fa-2x fa-fw fa-shopping-cart"></i>
+          <span>Add to Cart</span>
+        </a>
+      </div>
+      <div class="view-details-wrapper">
+        <a href="{{ product_url }}" title="View details for {{ product.title|render|striptags|trim }}">
+          <i class="fa fa-2x fa-fw fa-list"></i>
+          View Details
+        </a>
+      </div>
+      <div class="thumbnail-wrapper">
+        {% if thumbnail.entity.fileuri %}
+          <img alt="" class="img-responsive" src="{{ file_url(thumbnail.entity.fileuri) }}">
+        {% else %}
+          <img alt="" class="img-responsive" src="http://fillmurray.com/800/800">
+        {% endif %}
+      </div>
+    </div>
+    <div class="product-list-info-wrapper">
+      <a href="{{ product_url }}">
+        <h4>{{ product.title|render|striptags|trim }}</h4>
+        <h5>[ {{ product.variation_sku|render|striptags|trim }} ]</h5>
+        <span class="price">
+            <span class="current-price amount">{{ product.variation_price }}</span>
+            {% if product.field_regular_price|render|striptags|trim != '' %}
+              <span class="regular-price amount">
+              ( Was: <del>{{ product.field_regular_price }}</del> )
+              </span>
+            {% endif %}
+        </span>
+      </a>
+    </div>
+  </div>
+</div>

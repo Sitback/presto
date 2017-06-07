@@ -3,16 +3,22 @@ Theming for the boilerplate promo bars
 */
 .paragraph--type--component-promo-bar {
   display: block;
+  margin-bottom: 3em;
   float: none;
   clear: both;
 
   background-color: $promobarBackgroundColor;
   color: $promobarTextColor;
 
+  > div {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   p {
     font-size: 120%;
     line-height: 1.7;
-    color: $white;
+    color: $promobarTextColor;
   }
 
   .container {
@@ -88,12 +94,6 @@ Theming for the boilerplate promo bars
   }
 
   a {
-    color: $promobarLinkColor;
-
-    &:hover {
-      color: $promobarLinkColorHover;
-      text-decoration: none;
-    }
 
     &.nav-arrow {
 
@@ -116,6 +116,7 @@ Theming for the boilerplate promo bars
       }
     }
   }
+
   .full-bar {
     display: block;
     background-color: transparent;

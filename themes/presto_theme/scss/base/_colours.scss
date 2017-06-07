@@ -1,18 +1,10 @@
-$heroPrimary: #820263;
+/* $heroPrimary: #820263;
 $heroSecondary: #2E294E;
 $heroTertiary: #D90368;
-$heroQuarternary: #FFD400;
 $heroQuintenary: #EAEAEA;
+$heroQuarternary: #FFD400;
 
-/* Coolors Exported Palette - coolors.co/50514f-f25f5c-ffe066-247ba0-70c1b3 */
-
-/* RGB */
-$color1: rgba(80, 81, 79, 1);
-$color2: rgba(242, 95, 92, 1);
-$color3: rgba(255, 224, 102, 1);
-$color4: rgba(36, 123, 160, 1);
-$color5: rgba(112, 193, 179, 1);
-
+ */
 /* RGB */
 $color1: rgba(85, 221, 224, 1);
 $color2: rgba(51, 101, 138, 1);
@@ -20,61 +12,147 @@ $color3: rgba(47, 72, 88, 1);
 $color4: rgba(246, 174, 45, 1);
 $color5: rgba(242, 100, 25, 1);
 
+$turquoise-blue: $color1;
+$calypso: $color2;
+$pickled-bluewood: $color3;
+$sea-buckthorn: $color4;
+$flamingo: $color5;
+
 $white: #fff;
 $black: #333;
 $grey: #aaa;
 $light-grey: #f2f2f2;
 
-
-$darkLiver: $color1;
-$sunset-orange: $color2;
-$mustard: $color3;
-$lapis-lazuli: $color4;
-$green-sheen: $color5;
-
 $textColor: $black;
+$backgroundColor: $white;
 
-$linkColor: $heroTertiary;
-$linkColorHover: $heroSecondary;
+$formInputBorderColor: $flamingo;
+
+$siteButtonTextColor: $white;
+$siteButtonBorderColor: $calypso;
+$siteButtonArrowColor: $white;
+$siteButtonBackgroundColor: $calypso;
+$siteButtonTextColorHover: $white;
+$siteButtonArrowColorHover: $white;
+$siteButtonBorderColorHover: $pickled-bluewood;
+$siteButtonBackgroundColorHover: $pickled-bluewood;
+
+$tagButtonTextColor: $calypso;
+$tagButtonBorderColor: $turquoise-blue;
+$tagButtonArrowColor: $calypso;
+$tagButtonBackgroundColor: $light-grey;
+$tagButtonTextColorHover: $white;
+$tagButtonArrowColorHover: $white;
+$tagButtonBorderColorHover: $turquoise-blue;
+$tagButtonBackgroundColorHover: $calypso;
+
+$categoryButtonTextColor: $white;
+$categoryButtonBorderColor: $flamingo;
+$categoryButtonArrowColor: $white;
+$categoryButtonBackgroundColor: $sea-buckthorn;
+$categoryButtonTextColorHover: $white;
+$categoryButtonArrowColorHover: $white;
+$categoryButtonBorderColorHover: $calypso;
+$categoryButtonBackgroundColorHover: $flamingo;
+
+$slideshowControlColor: $sea-buckthorn;
+
+$blockQuoteBorderColor: $light-grey;
+$blockQuoteColor: $flamingo;
+
+
+$textShadowColor: $black;
+
+$linkColor: $pickled-bluewood;
+$linkColorHover: $calypso;
+
 $linkColorInverted: $white;
-$linkColorHoverInverted: $heroSecondary;
+$linkColorHoverInverted: $sea-buckthorn;
+
+$productItemBackground: $calypso;
+$productItemBackgroundHover: $pickled-bluewood;
+$productItemLinkColor: $white;
+$productItemLinkColorHover: $turquoise-blue;
+$productItemNormalPrice: $grey;
+$productItemSKUColor: $grey;
+
+$productItemOnSaleTagColor: $white;
+$productItemOnSaleTagBackground: $flamingo;
 
 $dividerColor: $grey;
-
 $dividerLinkColor: $linkColor;
 $dividerLinkColorHover: $linkColorHover;
 
-$mainMenuBackground: $heroQuintenary;
-$mainMenuLinkColor: $heroSecondary;
-$mainMenuLinkColorHover: $heroTertiary;
+$mainMenuBackground: transparent;
+$mainMenuTextColor: $pickled-bluewood;
+$mainMenuBorderColor: transparent;
+$mainMenuLinkColor: $pickled-bluewood;
 $mainMenuLinkBorderColor: transparent;
-$mainMenuLinkBorderColorActive: $heroTertiary;
-$mainMenuLinkBorderColorHover: $heroQuarternary;
-$mainMenuBorderColor: $heroPrimary;
+$mainMenuLinkColorHover: $calypso;
+$mainMenuLinkBorderColorHover: $turquoise-blue;
+$mainMenuLinkBorderColorActive: $sea-buckthorn;
+$mainMenuBackgroundHover: $light-grey;
 
-$siteButtonTextColor: $white;
-$siteButtonBorderColor: $heroPrimary;
-$siteButtonArrowColor: $white;
-$siteButtonBackgroundColor: $heroPrimary;
-$siteButtonTextColorHover: $heroPrimary;
-$siteButtonBorderColorHover: $heroPrimary;
-$siteButtonArrowColorHover: $heroPrimary;
-$siteButtonBackgroundColorHover: $white;
+$footerBackground: $calypso;
+$footerTextColor: $white;
+$footerBorderColor: transparent;
+$footerLinkColor: $linkColorInverted;
+$footerLinkBorderColor: transparent;
+$footerLinkColorHover: $linkColorHoverInverted;
+$footerLinkBorderColorHover: $sea-buckthorn;
+$footerLinkBorderColorActive: $sea-buckthorn;
 
-$promobarBackgroundColor: $heroTertiary;
-$promobarBackgroundColorHover: lighten($heroTertiary, .2);
+$promobarBackgroundColor: $flamingo;
+$promobarBackgroundColorHover: $sea-buckthorn;
 $promobarTextColor: $white;
+
 $promobarLinkColor: $linkColorInverted;
 $promobarLinkColorHover: $linkColorHoverInverted;
 
-$promobarButtonTextColor: $white;
-$promobarButtonBorderColor: $white;
-$promobarButtonArrowColor: $white;
-$promobarButtonBackgroundColor: transparent;
-$promobarButtonTextColorHover: $white;
-$promobarButtonBorderColorHover: $heroSecondary;
-$promobarButtonArrowColorHover: $white;
-$promobarButtonBackgroundColorHover: $heroSecondary;
+$imageCaptionBackgroundColor: $pickled-bluewood;
+$imageCaptionColor: $white;
 
-$footerLink: $white;
-$footerLinkHover: $heroQuarternary;
+$commerceVariantSelectedColor: $calypso;
+$commerceVariantUnselectedColor: $calypso;
+$commerceVariantLoadingColor: $grey;
+
+
+
+/*
+  Start messaging colours:
+    - Success
+    - Error
+    - Danger
+    - Info
+*/
+$honeydew: #edffed;
+$forest-green: #209920;
+
+$we-peep: #f7dad6;
+$dark-candy-apple-red: #a40000;
+
+$geyser:  #d0d9dd;
+$steel-blue: #3f88a8;
+
+$maverick: #dac0cb;
+$dark-raspberry: #82234a;
+
+$success: $honeydew;
+$successText: $forest-green;
+
+$danger: $we-peep;
+$dangerText: $dark-candy-apple-red;
+
+$information: $geyser;
+$informationText: $steel-blue;
+
+$error: $maverick;
+$errorText: $dark-raspberry;
+/*
+  End messaging colours:
+*/
+
+$paymentMethodExpiredColor: $dangerText;
+
+$orderCompletedTextColor: $successText;
+$orderCanceledTextColor: $dangerText;
