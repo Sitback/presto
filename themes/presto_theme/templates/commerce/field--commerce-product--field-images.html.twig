@@ -1,6 +1,7 @@
 {%
   set classes = [
     'slick',
+    'col-sm-4',
     settings.unslick ? 'unslick',
     display == 'main' and settings.blazy ? 'blazy',
     settings.vertical ? 'slick--vertical',
@@ -31,11 +32,15 @@
   {% endif %}
 
   {% block slick_content %}
-    {% for item in items %}
+      <div class="product_image">
+        {% set img = items|first %}
+        {{ img.content}}
+      </div>
+{#     {% for item in items %}
       <div>
       {{ item.content }}
     </div>
-    {% endfor %}
+    {% endfor %} #}
   {% endblock %}
 
   {% if not settings.unslick %}
