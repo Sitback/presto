@@ -94,6 +94,15 @@
       position: relative;
     }
 
+    .variations-wrapper {
+
+      legend,
+      .field--label,
+      .field--name-quantity {
+        @extend .hidden;
+      }
+    }
+
     .product-list-info-wrapper {
       width: 100%;
     }
