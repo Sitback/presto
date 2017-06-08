@@ -26,9 +26,11 @@ content:
     region: content
   field_icon:
     weight: 2
-    settings: {  }
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: options_select
+    type: string_textfield
     region: content
   field_icon_box_type:
     weight: 0

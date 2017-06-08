@@ -4,17 +4,15 @@ dependencies:
   config:
     - field.storage.paragraph.field_icon
     - paragraphs.paragraphs_type.component_icon_box
-  module:
-    - options
 id: paragraph.component_icon_box.field_icon
 field_name: field_icon
 entity_type: paragraph
 bundle: component_icon_box
 label: Icon
-description: 'Icon details are available here: http://fontawesome.io/icons/'
+description: 'Icon list is available here: http://fontawesome.io/icons/'
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: list_string
+field_type: string
