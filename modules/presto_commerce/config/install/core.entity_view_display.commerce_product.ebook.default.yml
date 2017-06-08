@@ -4,19 +4,11 @@ dependencies:
   config:
     - commerce_product.commerce_product_type.ebook
     - field.field.commerce_product.ebook.body
-    - field.field.commerce_product.ebook.field_category
-    - field.field.commerce_product.ebook.field_comments
-    - field.field.commerce_product.ebook.field_images
-    - field.field.commerce_product.ebook.field_regular_price
-    - field.field.commerce_product.ebook.field_tag
-    - field.field.commerce_product.ebook.field_thumbnail
     - field.field.commerce_product.ebook.stores
     - field.field.commerce_product.ebook.variations
   module:
-    - commerce_price
     - commerce_product
     - ds
-    - image
     - text
 id: commerce_product.ebook.default
 targetEntityType: commerce_product
@@ -26,47 +18,13 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 2
+    weight: -4
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_category:
-    type: entity_reference_label
-    weight: 4
-    region: content
-    label: visually_hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-  field_images:
-    type: image
-    weight: 0
-    region: content
-    label: visually_hidden
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-  field_regular_price:
-    type: commerce_price_default
-    weight: 1
-    region: content
-    label: visually_hidden
-    settings:
-      strip_trailing_zeroes: false
-      display_currency_code: false
-    third_party_settings: {  }
-  field_tag:
-    type: entity_reference_label
-    weight: 5
-    region: content
-    label: visually_hidden
-    settings:
-      link: true
-    third_party_settings: {  }
   variations:
     type: commerce_add_to_cart
-    weight: 3
+    weight: 10
     label: visually_hidden
     settings:
       combine: true
@@ -76,7 +34,5 @@ content:
     region: content
 hidden:
   created: true
-  field_comments: true
-  field_thumbnail: true
   stores: true
   uid: true

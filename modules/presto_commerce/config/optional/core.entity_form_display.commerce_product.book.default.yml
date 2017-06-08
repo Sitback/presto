@@ -6,7 +6,6 @@ dependencies:
     - field.field.commerce_product.book.body
     - field.field.commerce_product.book.stores
     - field.field.commerce_product.book.variations
-    - image.style.thumbnail
   module:
     - commerce
     - inline_entity_form

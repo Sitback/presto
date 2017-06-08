@@ -65,7 +65,7 @@ content:
     third_party_settings: {  }
   variations:
     type: inline_entity_form_complex
-    weight:10
+    weight: 10
     settings:
       override_labels: true
       label_singular: variation

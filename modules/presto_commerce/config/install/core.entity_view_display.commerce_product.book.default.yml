@@ -3,21 +3,11 @@ status: true
 dependencies:
   config:
     - commerce_product.commerce_product_type.book
-    - core.entity_view_display.comment.product.default
     - field.field.commerce_product.book.body
-    - field.field.commerce_product.book.field_category
-    - field.field.commerce_product.book.field_comments
-    - field.field.commerce_product.book.field_images
-    - field.field.commerce_product.book.field_regular_price
-    - field.field.commerce_product.book.field_tag
-    - field.field.commerce_product.book.field_thumbnail
     - field.field.commerce_product.book.stores
     - field.field.commerce_product.book.variations
   module:
-    - comment
-    - commerce_price
     - commerce_product
-    - image
     - text
 id: commerce_product.book.default
 targetEntityType: commerce_product
@@ -30,58 +20,6 @@ content:
     weight: -4
     settings: {  }
     third_party_settings: {  }
-    region: content
-  field_category:
-    weight: 11
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_comments:
-    weight: 12
-    label: above
-    settings:
-      view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
-    type: comment_default
-    region: content
-  field_images:
-    weight: 13
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
-  field_regular_price:
-    weight: 14
-    label: above
-    settings:
-      strip_trailing_zeroes: false
-      display_currency_code: false
-    third_party_settings: {  }
-    type: commerce_price_default
-    region: content
-  field_tag:
-    weight: 15
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_thumbnail:
-    weight: 16
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
     region: content
   variations:
     type: commerce_add_to_cart
