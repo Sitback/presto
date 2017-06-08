@@ -44,8 +44,7 @@ set classes = [
   'paragraph',
   'paragraph--type--' ~ paragraph.bundle|clean_class,
   view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-  'icon-box-list-' ~ content.field_icon_box['#items']|length ~ '-column',
-  'row'
+  'icon-box-list-' ~ content.field_icon_box['#items']|length ~ '-column'
 ]
 %}
 
@@ -58,14 +57,11 @@ set classes = [
       {% endblock %}
     </div>
   {% endblock paragraph %}
-
+`
 {% else %}
-  {{ kint(content.field_icon_box['#items']|length) }}
 
   <div {{ attributes.addClass(classes) }}>
-    <div class="">
-        {{ content }}
-    </div>
+    {{ content }}
   </div>
 
 {% endif %}
