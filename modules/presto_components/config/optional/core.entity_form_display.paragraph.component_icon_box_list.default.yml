@@ -12,7 +12,7 @@ bundle: component_icon_box_list
 mode: default
 content:
   field_icon_box:
-    type: entity_reference_paragraphs
+    type: paragraphs
     weight: 0
     settings:
       title: Paragraph
