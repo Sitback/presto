@@ -4,7 +4,6 @@ dependencies:
   config:
     - commerce_product.commerce_product_variation_type.ebook
     - field.field.commerce_product_variation.ebook.attribute_ebook_format
-    - field.field.commerce_product_variation.ebook.field_original_price
   module:
     - commerce_price
 id: commerce_product_variation.ebook.default
@@ -14,26 +13,19 @@ mode: default
 content:
   attribute_ebook_format:
     type: options_select
-    weight: 3
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_original_price:
-    weight: 2
-    settings:
-      placeholder: '12.99'
-    third_party_settings: {  }
-    type: number
-    region: content
   price:
     type: commerce_price_default
-    weight: 1
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
   sku:
     type: string_textfield
-    weight: 0
+    weight: -4
     region: content
     settings:
       size: 60
@@ -41,7 +33,7 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 4
+    weight: 99
     region: content
     settings:
       display_label: true

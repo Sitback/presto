@@ -5,7 +5,6 @@ dependencies:
     - commerce_product.commerce_product_variation_type.physical_book
     - field.field.commerce_product_variation.physical_book.attribute_book_binding
     - field.field.commerce_product_variation.physical_book.dimensions
-    - field.field.commerce_product_variation.physical_book.field_original_price
     - field.field.commerce_product_variation.physical_book.weight
   module:
     - commerce_price
@@ -17,34 +16,27 @@ mode: default
 content:
   attribute_book_binding:
     type: options_select
-    weight: 3
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
   dimensions:
     type: physical_dimensions_default
-    weight: 4
+    weight: 90
     settings:
       default_unit: ''
       allow_unit_change: true
     third_party_settings: {  }
     region: content
-  field_original_price:
-    weight: 2
-    settings:
-      placeholder: '12.99'
-    third_party_settings: {  }
-    type: number
-    region: content
   price:
     type: commerce_price_default
-    weight: 1
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
   sku:
     type: string_textfield
-    weight: 0
+    weight: -4
     region: content
     settings:
       size: 60
@@ -52,14 +44,14 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 6
+    weight: 99
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   weight:
     type: physical_measurement_default
-    weight: 5
+    weight: 91
     settings:
       default_unit: ''
       allow_unit_change: true
