@@ -1,0 +1,61 @@
+{%
+  set classes = [
+    'slick',
+    'col-sm-4',
+    settings.unslick ? 'unslick',
+    display == 'main' and settings.blazy ? 'blazy',
+    settings.vertical ? 'slick--vertical',
+    settings.attributes.class ? settings.attributes.class|join(' '),
+    settings.skin ? 'slick--skin--' ~ settings.skin|clean_class,
+    'boxed' in settings.skin ? 'slick--skin--boxed',
+    'split' in settings.skin ? 'slick--skin--split',
+    settings.optionset ? 'slick--optionset--' ~ settings.optionset|clean_class,
+    arrow_down_attributes is defined ? 'slick--has-arrow-down',
+    settings.asNavFor ? 'slick--' ~ display|clean_class,
+    settings.slidesToShow > 1 ? 'slick--multiple-view',
+    settings.count <= settings.slidesToShow ? 'slick--less',
+    display == 'main' and settings.media_switch ? 'slick--' ~ settings.media_switch|clean_class,
+    display == 'thumbnail' and settings.thumbnail_caption ? 'slick--has-caption'
+  ]
+%}
+{%
+  set arrow_classes = [
+    'slick__arrow',
+    settings.vertical ? 'slick__arrow--v',
+    settings.skin_arrows ? 'slick__arrow--' ~ settings.skin_arrows|clean_class
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  {% if not settings.unslick %}
+    <div{{ content_attributes.addClass('slick__slider') }}>
+  {% endif %}
+
+  {% block slick_content %}
+      <div class="product_image">
+        {% set img = items|first %}
+        {{ img.content}}
+      </div>
+{#     {% for item in items %}
+      <div>
+      {{ item.content }}
+    </div>
+    {% endfor %} #}
+  {% endblock %}
+
+  {% if not settings.unslick %}
+    </div>
+    {% block slick_arrow %}
+      <nav{{ arrow_attributes.addClass(arrow_classes) }}>
+        {{ settings.prevArrow|striptags('<a><em><span><strong><button><div>')|raw }}
+        {% if arrow_down_attributes is defined %}
+          <button{{ arrow_down_attributes.addClass('slick-down')
+            .setAttribute('type', 'button')
+            .setAttribute('data-target', settings.downArrowTarget)
+            .setAttribute('data-offset', settings.downArrowOffset) }}></button>
+        {% endif %}
+        {{ settings.nextArrow|striptags('<a><em><span><strong><button><div>')|raw }}
+      </nav>
+    {% endblock %}
+  {% endif %}
+</div>
