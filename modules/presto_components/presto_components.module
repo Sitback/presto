@@ -22,6 +22,14 @@ function presto_components_theme($existing, $type, $theme, $path) {
       'template' => 'paragraph--component-promo-bar',
       'base hook' => 'paragraph',
     ],
+    'paragraph__component_icon_box' => [
+      'template' => 'paragraph--component-icon-box',
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__component_icon_box_list' => [
+      'template' => 'paragraph--component-icon-box-list',
+      'base hook' => 'paragraph',
+    ],
   ];
 }
 

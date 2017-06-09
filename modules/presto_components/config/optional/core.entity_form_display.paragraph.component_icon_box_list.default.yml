@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.component_icon_box_list.field_icon_box
+    - paragraphs.paragraphs_type.component_icon_box_list
+  module:
+    - paragraphs
+id: paragraph.component_icon_box_list.default
+targetEntityType: paragraph
+bundle: component_icon_box_list
+mode: default
+content:
+  field_icon_box:
+    type: paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: preview
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

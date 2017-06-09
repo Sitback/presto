@@ -1,0 +1,50 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon_box
+    - paragraphs.paragraphs_type.component_icon_box
+    - paragraphs.paragraphs_type.component_icon_box_list
+  module:
+    - entity_reference_revisions
+id: paragraph.component_icon_box_list.field_icon_box
+field_name: field_icon_box
+entity_type: paragraph
+bundle: component_icon_box_list
+label: 'Icon box'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      component_icon_box: component_icon_box
+    target_bundles_drag_drop:
+      component_block:
+        weight: 9
+        enabled: false
+      component_divider:
+        weight: 10
+        enabled: false
+      component_icon_box:
+        enabled: true
+        weight: 11
+      component_icon_box_list:
+        weight: 12
+        enabled: false
+      component_image:
+        weight: 13
+        enabled: false
+      component_promo_bar:
+        weight: 14
+        enabled: false
+      component_slideshow:
+        weight: 15
+        enabled: false
+      component_textbox:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions
