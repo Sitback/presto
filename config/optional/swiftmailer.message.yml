@@ -1,4 +1,4 @@
 format: text/plain
 respect_format: true
-convert_mode: false
+convert_mode: true
 character_set: UTF-8
