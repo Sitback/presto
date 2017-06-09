@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon_box_type
+    - paragraphs.paragraphs_type.component_icon_box
+  module:
+    - options
+id: paragraph.component_icon_box.field_icon_box_type
+field_name: field_icon_box_type
+entity_type: paragraph
+bundle: component_icon_box
+label: 'Icon box type'
+description: 'Select the type of icon box. This determines which of the below fields is displayed (icon or image).'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

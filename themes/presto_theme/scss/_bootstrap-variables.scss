@@ -751,7 +751,7 @@ $input-height-base:              ($line-height-computed + ($padding-base-vertica
 //** Thumbnail background color
 // $thumbnail-bg:                $body-bg;
 //** Thumbnail border color
-// $thumbnail-border:            #ddd;
+$thumbnail-border:            transparent;
 //** Thumbnail border radius
 // $thumbnail-border-radius:     $border-radius-base;
 

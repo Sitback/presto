@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.component_icon_box_list.field_icon_box
+    - paragraphs.paragraphs_type.component_icon_box_list
+  module:
+    - entity_reference_revisions
+id: paragraph.component_icon_box_list.default
+targetEntityType: paragraph
+bundle: component_icon_box_list
+mode: default
+content:
+  field_icon_box:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

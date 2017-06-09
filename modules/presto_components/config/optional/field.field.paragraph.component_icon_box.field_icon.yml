@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon
+    - paragraphs.paragraphs_type.component_icon_box
+id: paragraph.component_icon_box.field_icon
+field_name: field_icon
+entity_type: paragraph
+bundle: component_icon_box
+label: Icon class
+description: 'You can find a list of icon classes on the Font Awesome site: <a href="http://fontawesome.io/icons/">http://fontawesome.io/icons/</a> (e.g. <code>fighter-jet</code>). <strong>You must NOT include the <code>fa-</code> prefix on the icon class.</strong>'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
