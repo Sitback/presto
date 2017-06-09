@@ -1,0 +1,15 @@
+.main-container {
+  &.container-fluid {
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+}
+
+hr {
+  /* sets the standard HR tag to look like the thin variant for page dividers*/
+  margin-bottom: 2em;
+  margin-top: 2em;
+  border-top: 0;
+  height: .5em;
+  border-bottom: 1px solid $dividerColor;
+}

@@ -1,0 +1,180 @@
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+.cart-empty-page {
+  @extend %container;
+}
+
+.layout-region-checkout-secondary {
+
+  .order-total-line {
+
+    &.order-total-line__subtotal {
+      @extend h4;
+    }
+
+    &.order-total-line__total {
+      @extend h3;
+    }
+  }
+}
+
+.cart-form {
+  @extend %container;
+
+  .table {
+    margin-bottom: 0;
+  }
+
+  .field--name-title {
+    @extend h4;
+    margin-bottom: 0;
+  }
+
+  th,
+  td {
+
+    &.views-field-unit-price__number {
+      display: none;
+    }
+  }
+
+  th {
+    @extend h4;
+
+    &.views-field-remove-button {
+      visibility: hidden;
+    }
+  }
+
+  .order-total-line-value,
+  .views-field-total-price__number {
+    font-size: 150%;
+    font-family: monospace;
+    text-align: right;
+  }
+
+  .order-total-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    > span {
+      flex-basis: 50%;
+      flex: 1 1 50%;
+    }
+
+    &.order-total-line__subtotal {
+      border-top: 1px solid $dividerColor;
+      padding-top: .5em;
+      padding-bottom: .5em;
+    }
+
+    &.order-total-line__total {
+      padding-top: .5em;
+      padding-bottom: .5em;
+      border-top: 1px solid $dividerColor;
+      border-bottom: 5px solid $dividerColor;
+      background: #efefef;
+      margin-bottom: 2em;
+    }
+  }
+
+  .form-actions {
+
+    button + button {
+      margin-left: 1em;
+    }
+  }
+
+  .field--name-sku {
+    font-size: 80%;
+    float: none;
+    clear: both;
+    line-height: 1;
+    margin-bottom: .75em;
+
+    &::before {
+      content: '[';
+    }
+    &::after {
+      content: ']';
+    }
+  }
+
+  .field--name-price {
+    float: none;
+    clear: both;
+
+    .field--label {
+      display: none;
+
+      &::after {
+        content: ':';
+      }
+    }
+
+    .field--item {
+      font-size: 180%;
+      margin-bottom: .5em;
+    }
+  }
+
+  .delete-order-item {
+    padding-right: 1.5em;
+  }
+
+  .glyphicon-ok {
+
+    &::before {
+      content: '\f021';
+      font-family: FontAwesome;
+      color: $white;
+      float: right;
+      margin-left: 1em;
+    }
+  }
+
+  .glyphicon-trash {
+
+    &::before {
+      content: '\f014';
+      font-family: FontAwesome;
+      color: $white;
+      float: right;
+      margin-left: 1em;
+    }
+  }
+}
+
+.layout-checkout-form {
+  @extend %container;
+
+  .panel {
+    padding: .5em 1em;
+    background: $light-grey;
+    margin-bottom: 1em;
+
+    .panel-heading {
+      @extend h3;
+    }
+
+
+    legend {
+      display: none;
+    }
+  }
+
+  .button {
+    margin-right: 1em;
+  }
+}

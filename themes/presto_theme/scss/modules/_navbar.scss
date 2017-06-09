@@ -1,0 +1,61 @@
+.navbar {
+  border-bottom: 0;
+  margin-bottom: 0;
+  background: $mainMenuBackground;
+  border-bottom: 2px solid $mainMenuBorderColor;
+
+
+  &.navbar-default {
+
+    .navbar-header {
+      margin-left: 15px;
+      margin-right: 15px;
+      width: 100%;
+      display: block;
+
+      @media only screen and (min-width: $screen-sm) {
+        margin-left: -15px;
+        margin-right: -15px;
+      }
+
+      .region-navigation {
+        @extend .clearfix;
+
+        nav {
+          float: right;
+        }
+      }
+    }
+    .navbar-nav {
+
+      > li {
+
+        > a {
+          color: $mainMenuLinkColor;
+          border-bottom: 2px solid $mainMenuLinkBorderColor;
+          margin-bottom: -2px;
+          padding-left: 2.5em;
+          padding-right: 2.5em;
+
+          &.is-active {
+            color: $mainMenuLinkColorHover;
+            border-bottom-color: $mainMenuLinkBorderColorActive;
+          }
+
+          &:hover {
+            color: $mainMenuLinkColorHover;
+            border-bottom-color: $mainMenuLinkBorderColorHover;
+            background: $mainMenuBackgroundHover;
+          }
+        }
+      }
+    }
+  }
+}
+
+.navbar-right {
+  @media screen and (min-width: 768px) {
+    margin-right: 0;
+  }
+}
+

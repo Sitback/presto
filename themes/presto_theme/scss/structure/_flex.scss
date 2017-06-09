@@ -11,6 +11,22 @@
     justify-content: space-around;
   }
 
+  &.middle {
+    align-items: stretch;
+
+    > * {
+      align-self: center;
+    }
+  }
+
+  &.bottom {
+    align-items: flex-end;
+  }
+
+  &.top {
+    align-items: flex-start;
+  }
+
  .flex-hog {
    flex-basis: 100%;
  }

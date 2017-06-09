@@ -1,0 +1,136 @@
+[typeof="schema:Article"] {
+
+  .field--name-field-published-on {
+    @extend %container;
+
+    .field--label {
+      display: none;
+    }
+
+    .field--item {
+        text-align: right;
+        margin-top: -2em;
+        margin-bottom: 2em;
+
+      * {
+        font-family: $headingFont;
+        font-size: 120%;
+      }
+    }
+  }
+
+  .field--name-field-media {
+    margin-bottom: 3em;
+    line-height: 1;
+
+    > .field--item {
+      text-align: center;
+    }
+
+    article {
+      margin: 0 auto;
+      display: inline-block;
+
+      img {
+        //width: 100%;
+      }
+    }
+  }
+
+  .field--name-body {
+    @extend %container;
+
+    p {
+      margin-top: 0;
+      margin-bottom: 2em;
+      line-height: 1.8;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .field--name-field-tags {
+    margin-top: 3em;
+    padding: 2em 0 0;
+    text-align: right;
+
+    &::before {
+      content: 'Tagged as:';
+      display: inline-block;
+      color: $black;
+      padding-right: 1em;
+    }
+  }
+}
+
+.path-frontpage .view-content,
+[class*="articles-listing"] {
+  @extend %container;
+
+  .views-row {
+
+    .content {
+      padding-bottom: 2em;
+      margin-bottom: 2em;
+      border-bottom: 1px solid $dividerColor;
+    }
+
+    &:last-of-type {
+
+      .content {
+        border-bottom-width: 0;
+      }
+    }
+
+    .field--name-field-published-on {
+
+      .field--item {
+        margin-top: 0;
+        text-align: left;
+        margin-top: -.75em;
+
+        time {
+          color: lighten($black, 30%);
+        }
+      }
+    }
+
+    .field--name-field-tags {
+      background: transparent;
+      margin-top: 0;
+      text-align: left;
+
+      .field__items {
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    .node-readmore {
+      display: block;
+      text-align: right;
+      font-size: 120%;
+      position: relative;
+      margin-top: 0;
+      a {
+        display: inline-block;
+        padding-right: 1em;
+
+        &::after {
+          font-size: 150%;
+          content: '\f105';
+          font-family: 'FontAwesome';
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}

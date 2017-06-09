@@ -1,0 +1,67 @@
+.contact-form {
+  @extend %container;
+  label {
+    &::after {
+      margin-left: .25em;
+    }
+  }
+}
+
+.form-control {
+  // padding: $button-input-padding;
+  &:focus {
+    border-color: $formInputBorderColor;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba($formInputBorderColor, .6)
+  }
+}
+
+.form-actions {
+  button {
+    @extend .btn;
+  }
+}
+
+.preview {
+  background: $light-grey;
+  padding: 4em 1em 1em;
+  position: relative;
+  margin-top: 2em;
+  &::before {
+    content: 'Message Preview';
+    font-family: $headingFont;
+    font-size: 120%;
+    margin-top: 0;
+    background: $white;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 1em;
+  }
+  &.form-wrapper {
+    .field--label {
+      @extend h5;
+      margin-bottom: .25em;
+    }
+    .field--item {
+      font-size: 110%;
+    }
+  }
+}
+
+// User Login form
+.user-login {
+  ul {
+    padding-left: 0;
+    list-style: none;
+    margin-left: -10px;
+
+    > li {
+      display: inline-block;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}
+

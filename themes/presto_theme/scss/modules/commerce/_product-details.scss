@@ -1,0 +1,146 @@
+.product-details {
+  @extend %container;
+
+  .field--name-title {
+    @extend h2;
+  }
+
+  .field--name-sku {
+    @extend h4;
+    color: $productItemSKUColor;
+    margin-top: 0;
+
+    &::before {
+      content: '[ ';
+    }
+
+    &::after {
+      content: ' ]';
+    }
+  }
+
+  .field--name-field-category,
+  .field--name-field-tag,
+  .field--name-field-images {
+    @extend .col-md-4;
+  }
+
+  .field--name-price,
+  .field--name-field-regular-price,
+  .field--name-body,
+  .field--name-variations {
+    @extend .col-md-8;
+  }
+
+  .field--name-price {
+    font-size: 150%;
+    display: inline-block;
+
+    .field--label {
+      display: none;
+    }
+
+  }
+
+  .field--name-field-regular-price {
+    color: $productItemNormalPrice;
+    margin-bottom: 2em;
+
+    .field--item {
+      display: inline;
+      text-decoration: line-through;
+      color: $productItemNormalPrice;
+    }
+
+    &::before {
+      content: '( Was: ';
+    }
+
+    &::after {
+      content: ' )';
+    }
+  }
+
+  .field--name-variations {
+    margin-top: 2em;
+
+    legend {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .fieldset-legend {
+      @extend h5;
+    }
+
+    .form-type-radio {
+
+      label {
+        padding-left: 0;
+        text-indent: 2em;
+        position: relative;
+      }
+
+      .input-group {
+        position: absolute;
+
+        .input-group-addon {
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 1em;
+          height: 1em;
+
+          .glyphicon-refresh {
+
+             &::before {
+              width: 1.5em;
+              text-align: center;
+              content: '\f10c';
+              font-family: FontAwesome;
+              margin-left: -3.5em;
+              position: absolute;
+              display: inline-block;
+              color: $commerceVariantUnselectedColor;
+
+            }
+
+          }
+        }
+
+        input {
+          position: absolute;
+          opacity: 0;
+
+          &:checked {
+
+            & + .input-group-addon {
+
+              .glyphicon-refresh {
+                 &::before {
+                  content: '\f05d';
+                  color: $commerceVariantSelectedColor;
+
+                  &.glyphicon-spin {
+
+                    &::after {
+                      content: '\f1ce';
+                      color: $commerceVariantLoadingColor;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  img {
+    max-width: 150px;
+    height: auto;
+  }
+}

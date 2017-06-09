@@ -1,0 +1,13 @@
+.paragraph--type--component-textbox {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  .field--item {
+    @extend .presto-container;
+
+    p {
+      margin-top: 0;
+      margin-bottom: 2em;
+      line-height: 1.8;
+    }
+  }
+}

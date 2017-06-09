@@ -1,13 +1,44 @@
+@import 'base/spacing';
+@import 'base/colours';
+@import 'base/typography';
+@import 'base/mixins';
+
+
 @import 'bootstrap-variables';
 @import 'bootstrap';
 // Add flexbox support to Bootstrap columns
 @import '../node_modules/flexboxgrid-sass/flexboxgrid';
 // @import 'scss/font-awesome';
 
-@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+@import 'base/flexbox-grid-overrides';
 
-@import 'base/colours';
+@import 'base/fonts';
+
 
 @import 'structure/flex';
+@import 'structure/overrides';
 
+@import 'modules/page';
+@import 'modules/navbar';
+@import 'modules/breadcrumb';
+@import 'modules/textbox';
+@import 'modules/images';
+@import 'modules/buttons';
 @import 'modules/dividers';
+@import 'modules/promo-bar';
+@import 'modules/slideshow';
+@import 'modules/lists';
+@import 'modules/links';
+@import 'modules/blockquote';
+
+@import 'modules/article';
+
+@import 'modules/form';
+@import 'modules/footer';
+
+@import 'modules/commerce';
+@import 'modules/alerts';
+
+@import 'modules/commerce/shop';
+
+@import 'vendor/lity';

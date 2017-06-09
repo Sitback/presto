@@ -1,0 +1,51 @@
+$font-quattrocento: 'Quattrocento Sans', sans-serif;
+$font-open: 'Open Sans', sans-serif;
+
+$bodyFont: $font-open;
+$headingFont: $font-quattrocento;
+
+body {
+  * {
+    font-family: $bodyFont;
+    color: $textColor;
+  }
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headingFont;
+  font-weight: 400;
+  * {
+    font-family: $headingFont;
+  }
+}
+
+h1 {
+  font-size: 300%;
+}
+
+h2 {
+  font-size: 250%;
+}
+
+h3 {
+  font-size: 200%;
+}
+
+h4 {
+  font-size: 150%;
+}
+
+h5 {
+  font-size: 120%;
+}
+
+h6 {
+  font-size: 120%;
+  font-weight: 200;
+}
+
+.page-header {
+  text-align: center;
+  font-family: $headingFont;
+}

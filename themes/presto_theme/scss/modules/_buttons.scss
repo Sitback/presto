@@ -1,0 +1,43 @@
+
+.btn {
+  position: relative;
+  text-align: left;
+  display: inline-block;
+  border: 1px solid $siteButtonBorderColor;
+  color: $siteButtonTextColor;
+  background: $siteButtonBackgroundColor;
+  transition: color .5s, background .75s, border-color 1s;
+
+  &:hover {
+    color: $siteButtonTextColorHover;
+    border-color: $siteButtonBorderColorHover;
+    background: $siteButtonBackgroundColorHover;
+  }
+
+  .fa {
+    color: $siteButtonTextColor;
+  }
+
+  &.navigation {
+    padding-right: 3em;
+
+    &::after {
+      font-size: 150%;
+      content: '\f105';
+      font-family: 'FontAwesome';
+      display: block;
+      position: absolute;
+      right: 1em;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $siteButtonArrowColor;
+    }
+
+    &:hover {
+
+      &::after {
+        color: $siteButtonArrowColorHover;
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+.user-customer {
+
+  .views-element-container {
+    @extend %container;
+
+    &:first-line {
+      // This is the "Active Customer" heading
+      @extend h4;
+      line-height: 3;
+      vertical-align: top;
+    }
+
+    .views-view-grid {
+
+      .views-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: top;
+
+        &::before,
+        &::after {
+          display: none;
+        }
+
+        .views-col {
+          flex-grow: 1;
+          flex-basis: 25%;
+
+          .given-name,
+          .family-name {
+            @extend h4;
+            margin-bottom: 1em;
+            display: inline-block;
+          }
+        }
+
+        .user-profile-actions {
+
+          button {
+
+            &::after {
+              content: '\f040';
+              font-family: FontAwesome;
+              padding-left: .5em;
+              display: inline-block;
+            }
+          }
+
+          a {
+            @extend .btn;
+            @extend .btn-xs;
+            margin-right: .3em;
+
+            &[href*='delete'] {
+              @extend .btn-danger;
+
+              &::after {
+                content: '\f014';
+                font-family: FontAwesome;
+                padding-left: .5em;
+                display: inline-block;
+              }
+            }
+
+            &[href*='set-default'] {
+              @extend .btn-success;
+
+              &::after {
+                content: '\f00c';
+                font-family: FontAwesome;
+                padding-left: .5em;
+                display: inline-block;
+              }
+            }
+          }
+
+          .dropdown-toggle {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
