@@ -10,8 +10,8 @@ id: paragraph.component_icon_box.field_icon_box_type
 field_name: field_icon_box_type
 entity_type: paragraph
 bundle: component_icon_box
-label: 'Select the type of icon box'
-description: 'Select Image or Icon to define if you need to complete the field Image or Icon.'
+label: 'Icon box type'
+description: 'Select the type of icon box. This determines which of the below fields is displayed (icon or image).'
 required: true
 translatable: false
 default_value: {  }
