@@ -73,6 +73,7 @@ class PrestoConfigureForm extends FormBase {
       '#tree' => TRUE,
     ];
 
+    $hasOptionalDepsForm = FALSE;
     $form_state->set('optional_dependencies', []);
     foreach ($optionalDeps as $optionalDep) {
       /** @var \Drupal\presto\Installer\OptionalDependencies\OptionalDependencyInterface $instance */
@@ -91,13 +92,15 @@ class PrestoConfigureForm extends FormBase {
         $subFormState
       );
 
+      if (count($form['optional_dependencies'][$optionalDep['id']]) > 0) {
+        $hasOptionalDepsForm = TRUE;
+      }
+
       $form_state->set(['optional_dependencies', $optionalDep['id']], $instance);
     }
 
     // Hide optional dependencies fieldset if the config form is empty.
-    if (count(Element::children($form['optional_dependencies'])) === 0) {
-      $form['optional_dependencies']['#access'] = FALSE;
-    }
+    $form['optional_dependencies']['#access'] = $hasOptionalDepsForm;
 
     $form['ecommerce'] = [
       '#type' => 'fieldset',
