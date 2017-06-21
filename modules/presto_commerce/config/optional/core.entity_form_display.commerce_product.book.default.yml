@@ -65,16 +65,17 @@ content:
     third_party_settings: {  }
   variations:
     type: inline_entity_form_complex
-    weight: 10
+    weight: 4
     settings:
-      override_labels: true
-      label_singular: variation
-      label_plural: variations
-      form_mode: default
+      match_operator: CONTAINS
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
       allow_new: true
       allow_existing: false
-      match_operator: CONTAINS
     third_party_settings: {  }
     region: content
 hidden:
+  body: true
   status: true
+  stores: true

@@ -64,8 +64,8 @@ content:
       placeholder: ''
     third_party_settings: {  }
   variations:
-    type: inline_entity_form_complex
-    weight: 10
+    type: inline_entity_form_simple
+    weight: 11
     settings:
       override_labels: true
       label_singular: variation
