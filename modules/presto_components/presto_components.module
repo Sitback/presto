@@ -30,6 +30,18 @@ function presto_components_theme($existing, $type, $theme, $path) {
       'template' => 'paragraph--component-icon-box-list',
       'base hook' => 'paragraph',
     ],
+    'paragraph__component_accordion' => [
+      'template' => 'paragraph--component-accordion',
+      'base hook' => 'paragraph',
+    ],
+    'field__paragraph__field_accordion_panel' => [
+      'template' => 'field--paragraph--field-accordion-panel',
+      'base hook' => 'field',
+    ],
+    'paragraph__component_accordion_panel' => [
+      'template' => 'paragraph--component-accordion-panel',
+      'base hook' => 'paragraph',
+    ],
   ];
 }
 
@@ -42,3 +54,27 @@ function presto_components_theme_suggestions_paragraph_alter(array &$suggestions
   $type = $paragraph->getType();
   $suggestions[] = "paragraph__{$type}";
 }
+
+
+/**
+ * Prepares variables for paragraph templates.
+ *
+ * Default template: paragraph.html.twig.
+ *
+ * Most themes use their own copy of paragraph.html.twig. The default is located
+ * inside "templates/paragraph.html.twig". Look in there for the
+ * full list of variables.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - elements: An array of elements to display in view mode.
+ *   - paragraph: The paragraph object.
+ *   - view_mode: View mode; e.g., 'full', 'teaser'...
+ */
+function presto_components_preprocess_paragraph(&$variables) {
+  $paragraph = $variables['elements']['#paragraph'];
+  $type = $paragraph->getType();
+  $id = $paragraph->id();
+  $variables['accordion_panel_id'] = "{$type}_{$id}";
+}
+
