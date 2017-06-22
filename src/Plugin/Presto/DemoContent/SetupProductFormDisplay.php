@@ -11,7 +11,7 @@ use Drupal\Core\Config\FileStorage;
  * @PrestoDemoContent(
  *     id = "setup_product_form_display",
  *     type = \Drupal\presto\Installer\DemoContentTypes::ECOMMERCE,
- *     label = @Translation("Setup product form displau"),
+ *     label = @Translation("Setup product form display"),
  *     weight = 12
  * )
  *
@@ -30,7 +30,7 @@ class SetupProductFormDisplay extends AbstractDemoContent {
 
     $source = new FileStorage($configPath);
 
-    // Re-read checkout flow from the export config file.
+    // Re-read checkout form display from the export config file.
     // This should be safe enough as this only runs within a site install
     // context.
     $configStorage = Drupal::service('config.storage');
