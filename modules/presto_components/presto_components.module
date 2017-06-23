@@ -42,3 +42,17 @@ function presto_components_theme_suggestions_paragraph_alter(array &$suggestions
   $type = $paragraph->getType();
   $suggestions[] = "paragraph__{$type}";
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function presto_components_form_alter(
+  &$form,
+  \Drupal\Core\Form\FormStateInterface $form_state,
+  $form_id
+) {
+  // Attached some JS to manage the conditional display for IconBox.
+  if (isset($form['field_body_paragraphs'])){
+    $form['#attached']['library'][] = 'presto_components/iconbox_conditional_display';
+  }
+}
