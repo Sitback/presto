@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.component_accordion_panel.field_body
+    - field.field.paragraph.component_accordion_panel.field_start_expanded
+    - field.field.paragraph.component_accordion_panel.field_title_formatted
+    - paragraphs.paragraphs_type.component_accordion_panel
+  module:
+    - text
+id: paragraph.component_accordion_panel.default
+targetEntityType: paragraph
+bundle: component_accordion_panel
+mode: default
+content:
+  field_body:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_start_expanded:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_title_formatted:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

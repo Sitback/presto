@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: component_accordion
+label: 'Component: Accordion'
+behavior_plugins: {  }

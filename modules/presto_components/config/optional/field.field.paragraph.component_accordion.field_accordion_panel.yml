@@ -1,0 +1,50 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_accordion_panel
+    - paragraphs.paragraphs_type.component_accordion
+    - paragraphs.paragraphs_type.component_accordion_panel
+  module:
+    - entity_reference_revisions
+id: paragraph.component_accordion.field_accordion_panel
+field_name: field_accordion_panel
+entity_type: paragraph
+bundle: component_accordion
+label: 'Accordion panel'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      component_accordion_panel: component_accordion_panel
+    target_bundles_drag_drop:
+      component_accordion:
+        weight: 9
+        enabled: false
+      component_accordion_panel:
+        enabled: true
+        weight: 10
+      component_block:
+        weight: 11
+        enabled: false
+      component_divider:
+        weight: 12
+        enabled: false
+      component_image:
+        weight: 13
+        enabled: false
+      component_promo_bar:
+        weight: 14
+        enabled: false
+      component_slideshow:
+        weight: 15
+        enabled: false
+      component_textbox:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

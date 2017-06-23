@@ -49,23 +49,13 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-      <h3>{{ content.field_accordion_title.0 }}</h3>
-
-      <h3>Variable: <code>{{ node.field_multi_item_expandable.value }}</code></h3>
-
-      {{ content.field_multi_item_expandable == true ? 'checked' : 'unchecked' }}
-
-      {% if content.field_multi_item_expandable == true %}
-        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      {% if content.field_multi_item_expandable[0]['#markup'] == '0' %}
+        <div class="panel-group" id="{{paragraph_type_id}}" role="tablist" aria-multiselectable="false">
       {% else %}
         <div class="panel-group" role="tablist" aria-multiselectable="true">
       {% endif %}
-        {{ content.field_accordion_panel }}
-      </div>
-
-
-
-
+          {{ content.field_accordion_panel }}
+        </div>
     {% endblock %}
   </div>
 {% endblock paragraph %}
