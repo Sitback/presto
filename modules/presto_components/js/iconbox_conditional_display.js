@@ -19,46 +19,46 @@
   Drupal.behaviors.paragraphIconBox = {
     attach: function (context, settings) {
 
-      function conditional_display(elt) {
+      function conditionalDisplay(elt) {
 
         let id = jQuery(elt).attr('id');
-        let selected = $("#" + id + ' option:selected').val();
+        let selected = $('#' + id + ' option:selected').val();
 
-        let image_field = $('[data-drupal-selector*="edit-field-body-paragraphs-"][data-drupal-selector*="-subform-field-media-wrapper"]');
-        let icon_field = $('[data-drupal-selector*="edit-field-body-paragraphs-"][data-drupal-selector*="-subform-field-icon-wrapper"]');
+        let imageField = $('[data-drupal-selector*="edit-field-body-paragraphs-"][data-drupal-selector*="-subform-field-media-wrapper"]');
+        let iconField = $('[data-drupal-selector*="edit-field-body-paragraphs-"][data-drupal-selector*="-subform-field-icon-wrapper"]');
 
         switch (selected.toLowerCase()) {
           case '_none':
-            image_field.hide();
-            icon_field.hide();
+            imageField.hide();
+            iconField.hide();
             break;
 
           case 'image':
-            image_field.show();
-            icon_field.hide();
+            imageField.show();
+            iconField.hide();
             break;
 
           case 'icon':
-            icon_field.show();
-            image_field.hide();
+            iconField.show();
+            imageField.hide();
             break;
 
           default:
             // Case default or _none.
             // Hide both.
-            image_field.hide();
-            icon_field.hide();
-            break
+            imageField.hide();
+            iconField.hide();
+            break;
         }
 
       }
 
       $('[name*="field_body_paragraphs"][name*="subform"][name*="field_icon_box_type"]').each(function() {
 
-        $(this).load(conditional_display(this));
+        $(this).load(conditionalDisplay(this));
 
         $(this).change(function () {
-          conditional_display(this);
+          conditionalDisplay(this);
         });
 
       });
