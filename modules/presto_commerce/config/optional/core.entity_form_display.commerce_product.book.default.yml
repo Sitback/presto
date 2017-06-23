@@ -16,21 +16,46 @@ targetEntityType: commerce_product
 bundle: book
 mode: default
 content:
+  body:
+    type: text_textarea_with_summary
+    weight: 3
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 4
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  stores:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
@@ -55,11 +80,7 @@ content:
       label_plural: ''
       allow_new: true
       allow_existing: false
+      form_mode: default
     third_party_settings: {  }
     region: content
-hidden:
-  body: true
-  path: true
-  status: true
-  stores: true
-
+hidden: {  }
