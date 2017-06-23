@@ -37,13 +37,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  status:
-    type: boolean_checkbox
-    weight: 7
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
   stores:
     type: entity_reference_autocomplete
     weight: 2
@@ -83,4 +76,5 @@ content:
       match_operator: CONTAINS
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  status: true
