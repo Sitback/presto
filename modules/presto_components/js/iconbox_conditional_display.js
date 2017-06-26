@@ -1,6 +1,6 @@
 /**
  * @file
- * Defines the behavior of the media entity browser view.
+ * Defines the behavior of paragraph Icon box form display.
  *
  * Based on code by Burda in BurdaMagazinOrg/thunder, copyright (c) 2017.
  * Distributed under the GNU GPL v2 or higher. For full terms see the LICENSE
@@ -17,7 +17,7 @@
    * Attaches the behavior of the media entity browser view.
    */
   Drupal.behaviors.paragraphIconBox = {
-    attach: function (context, settings) {
+    attach(context, settings) {
 
       function conditionalDisplay(elt) {
 
