@@ -5,6 +5,8 @@
  * The Presto Components module file.
  */
 
+use \Drupal\Core\Form\FormStateInterface;
+
 /**
  * Implements theme_hook().
  */
@@ -48,7 +50,7 @@ function presto_components_theme_suggestions_paragraph_alter(array &$suggestions
  */
 function presto_components_form_alter(
   &$form,
-  \Drupal\Core\Form\FormStateInterface $form_state,
+  FormStateInterface $form_state,
   $form_id
 ) {
   // Attached some JS to manage the conditional display for IconBox.

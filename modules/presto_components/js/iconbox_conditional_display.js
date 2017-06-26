@@ -53,7 +53,7 @@
 
       }
 
-      $('[name*="field_body_paragraphs"][name*="subform"][name*="field_icon_box_type"]').each(function() {
+      $('[name*="field_body_paragraphs"][name*="subform"][name*="field_icon_box_type"]').each(function () {
 
         $(this).load(conditionalDisplay(this));
 
