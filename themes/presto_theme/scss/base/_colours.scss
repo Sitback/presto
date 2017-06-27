@@ -22,8 +22,21 @@ $white: #fff;
 $black: #333;
 $grey: #aaa;
 $light-grey: #f2f2f2;
+$extra-light-grey: #fafafa;
+
+/* Social Colours */
+$twitter-blue: #1DA1F2;
+$facebook-blue: #3b5998;
+$linkedin-blue: #0077b5;
+$email-blue: $calypso;
+
+$twitter-background: $twitter-blue;
+$facebook-background: $facebook-blue;
+$linkedin-background: $linkedin-blue;
+$email-background: $email-blue;
 
 $textColor: $black;
+$textColorLowlight: $grey;
 $backgroundColor: $white;
 
 $formInputBorderColor: $flamingo;
@@ -99,8 +112,8 @@ $footerBorderColor: transparent;
 $footerLinkColor: $linkColorInverted;
 $footerLinkBorderColor: transparent;
 $footerLinkColorHover: $linkColorHoverInverted;
-$footerLinkBorderColorHover: $sea-buckthorn;
-$footerLinkBorderColorActive: $sea-buckthorn;
+$footerLinkBorderColorHover: $turquoise-blue;
+$footerLinkBorderColorActive: $turquoise-blue;
 
 $promobarBackgroundColor: $flamingo;
 $promobarBackgroundColorHover: $sea-buckthorn;
@@ -116,6 +129,8 @@ $commerceVariantSelectedColor: $calypso;
 $commerceVariantUnselectedColor: $calypso;
 $commerceVariantLoadingColor: $grey;
 
+$socialSharingBannerBackground: $extra-light-grey;
+$publishedDateBannerBackground: $extra-light-grey;
 
 
 /*
