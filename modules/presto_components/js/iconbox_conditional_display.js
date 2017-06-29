@@ -21,7 +21,7 @@
 
       function conditionalDisplay(elt) {
 
-        let id = jQuery(elt).attr('id');
+        let id = $(elt).attr('id');
         let selected = $('#' + id + ' option:selected').val();
 
         let imageField = $('[data-drupal-selector*="edit-field-body-paragraphs-"][data-drupal-selector*="-subform-field-media-wrapper"]');
