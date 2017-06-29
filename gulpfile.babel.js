@@ -7,7 +7,7 @@ import gulpRequireTasks from 'gulp-require-tasks';
 import UglifyJSPlugin from 'uglifyjs-webpack-plugin';
 
 const CWD = process.cwd();
-const JS_SRC = 'js/src/**/*.js';
+const JS_SRC = ['js/src/**/*.js', 'modules/**/js/src/**/*.js'];
 const JS_DEST = 'js/compiled';
 
 // Add theme tasks too.
