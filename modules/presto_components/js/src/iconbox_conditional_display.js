@@ -7,7 +7,7 @@
  * file.
  */
 
-/*global Drupal drupalSettings*/
+/* global Drupal drupalSettings */
 
 (function ($) {
 
