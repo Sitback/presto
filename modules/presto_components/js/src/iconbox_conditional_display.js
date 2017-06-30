@@ -1,28 +1,18 @@
 /**
  * @file
  * Defines the behavior of paragraph Icon box form display.
- *
- * Based on code by Burda in BurdaMagazinOrg/thunder, copyright (c) 2017.
- * Distributed under the GNU GPL v2 or higher. For full terms see the LICENSE
- * file.
  */
 
-/* global Drupal drupalSettings */
-
-(function ($) {
-
-  'use strict';
+(function ($, Drupal) {
 
   /**
    * Attaches the behavior of the media entity browser view.
    */
   Drupal.behaviors.paragraphIconBox = {
     attach(context, settings) {
-
-      function conditionalDisplay(elt) {
-
+      let conditionalDisplay = (elt) => {
         let id = $(elt).attr('id');
-        let selected = $('#' + id + ' option:selected').val();
+        let selected = $(`#${id}`).find('option:selected').val();
 
         let imageField = $('[data-drupal-selector*="edit-field-body-paragraphs-"][data-drupal-selector*="-subform-field-media-wrapper"]');
         let iconField = $('[data-drupal-selector*="edit-field-body-paragraphs-"][data-drupal-selector*="-subform-field-icon-wrapper"]');
@@ -50,20 +40,15 @@
             iconField.hide();
             break;
         }
-
-      }
+      };
 
       $('[name*="field_body_paragraphs"][name*="subform"][name*="field_icon_box_type"]').each(function () {
-
         $(this).load(conditionalDisplay(this));
-
         $(this).change(function () {
           conditionalDisplay(this);
         });
-
       });
-
     }
-
   };
-}(jQuery, Drupal));
+
+}(jQuery, window.Drupal));
