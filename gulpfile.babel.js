@@ -65,7 +65,6 @@ let generateJsWebpackTask = (watch = true) => {
     }, webpack))
     .on('error', function (err) {
       gutil.log('WEBPACK ERROR', err.message);
-      this.emit('end');
     })
     .pipe(gulp.dest((file) => {
       // Output to original path or just base if we don't have a stored one.
