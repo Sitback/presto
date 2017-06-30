@@ -5,7 +5,7 @@
  * The Presto Components module file.
  */
 
-use \Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements theme_hook().
@@ -54,7 +54,7 @@ function presto_components_form_alter(
   $form_id
 ) {
   // Attached some JS to manage the conditional display for IconBox.
-  if (isset($form['field_body_paragraphs'])){
+  if (isset($form['field_body_paragraphs'])) {
     $form['#attached']['library'][] = 'presto_components/iconbox_conditional_display';
   }
 }
