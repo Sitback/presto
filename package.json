@@ -30,6 +30,7 @@
     "gulp": "^3.9.1",
     "gulp-require-tasks": "^1.1.1",
     "gulp-util": "^3.0.8",
+    "through2": "^2.0.3",
     "uglify-js": "git://github.com/mishoo/UglifyJS2#harmony-v2.8.22",
     "uglifyjs-webpack-plugin": "^0.4.6",
     "vinyl-named": "^1.1.0",
