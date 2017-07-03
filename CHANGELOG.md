@@ -1,6 +1,7 @@
 # CHANGELOG
 
 ## Unreleased
+* Added a new WYSIWYG style called LeadParagraph which will provide p.lead as html.
 
 ## 8.x-1.0-rc1 (1.0.0-rc.1)
 * Fixes bug with form display for books and ebooks (the variation field was disabled.)

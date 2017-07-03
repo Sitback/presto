@@ -1,9 +1,6 @@
-uuid: 637b572c-d6ad-4a8b-915a-6eef3c47ebc9
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
 id: anonymous
 label: 'Anonymous user'
 weight: 0
@@ -13,5 +10,4 @@ permissions:
   - 'access content'
   - 'access site-wide contact form'
   - 'search content'
-  - 'use text format restricted_html'
   - 'view media'

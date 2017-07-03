@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - filter.format.full_html
+    - filter.format.restricted_html
   module:
     - ckeditor
-format: full_html
+format: restricted_html
 editor: ckeditor
 settings:
   toolbar:
@@ -16,13 +16,8 @@ settings:
           items:
             - Bold
             - Italic
-            - Strike
-            - Superscript
-            - Subscript
-            - '-'
-            - RemoveFormat
         -
-          name: Linking
+          name: Links
           items:
             - DrupalLink
             - DrupalUnlink
@@ -36,8 +31,6 @@ settings:
           items:
             - Blockquote
             - DrupalImage
-            - Table
-            - HorizontalRule
         -
           name: 'Block Formatting'
           items:
@@ -46,7 +39,6 @@ settings:
         -
           name: Tools
           items:
-            - ShowBlocks
             - Source
   plugins:
     language:
@@ -54,7 +46,7 @@ settings:
     stylescombo:
       styles: p.lead|LeadParagraph
 image_upload:
-  status: true
+  status: false
   scheme: public
   directory: inline-images
   max_size: ''

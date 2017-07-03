@@ -1,11 +1,13 @@
 langcode: en
 status: true
 dependencies: {  }
-id: authenticated
-label: 'Authenticated user'
-weight: 1
+id: editor
+label: Editor
+weight: 3
 is_admin: false
 permissions:
+  - 'access cart'
+  - 'access checkout'
   - 'access comments'
   - 'access content'
   - 'access shortcuts'
@@ -14,5 +16,6 @@ permissions:
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
+  - 'use text format restricted_html'
   - 'view media'
   - 'view own commerce_order'

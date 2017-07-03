@@ -35,13 +35,16 @@ settings:
           name: 'Block Formatting'
           items:
             - Format
+            - Styles
         -
           name: Tools
           items:
             - Source
   plugins:
+    language:
+      language_list: un
     stylescombo:
-      styles: ''
+      styles: p.lead|LeadParagraph
 image_upload:
   status: true
   scheme: public
