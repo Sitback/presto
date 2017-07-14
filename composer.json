@@ -137,10 +137,6 @@
             "drupal/social_media": {
                 "Fix undefined index error (#2836382)":
                     "https://www.drupal.org/files/issues/2836382-drupal-settings-undefined-index_1.patch"
-            },
-            "drupal/commerce": {
-                "AddToCartForm should support all purchasable entities (#2827721)":
-                    "https://www.drupal.org/files/issues/presto-commerce-add-to-cart-variations.patch"
             }
         },
         "asset-library-overrides": {
