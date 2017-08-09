@@ -19,7 +19,7 @@ global-styling:
     theme:
       css/style.css: { media: screen }
   js:
-    js/compiled/presto.min.js: { defer: true, minified: true }
+    js/compiled/presto.js: { defer: true, minified: true }
   dependencies:
     - core/drupal
     - core/jquery
