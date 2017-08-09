@@ -2,8 +2,7 @@
 
 namespace Drupal\presto\Plugin\Presto\DemoContent;
 
-use Drupal;
-use Drupal\Core\Config\FileStorage;
+use Drupal\presto\Mixins\DrupalConfigReaderTrait;
 
 /**
  * Sets up the checkout flow.
@@ -19,24 +18,20 @@ use Drupal\Core\Config\FileStorage;
  */
 class SetupCheckoutFlow extends AbstractDemoContent {
 
+  use DrupalConfigReaderTrait;
+
   /**
    * {@inheritdoc}
    *
    * @throws \Drupal\Core\Config\UnsupportedDataTypeConfigException
+   * @throws \Drupal\Core\Config\StorageException
    */
   public function createContent() {
     $modulePath = drupal_get_path('module', 'presto_commerce');
     $configPath = "{$modulePath}/config/optional";
-
-    $source = new FileStorage($configPath);
-
-    // Re-read checkout flow from the export config file.
-    // This should be safe enough as this only runs within a site install
-    // context.
-    $configStorage = Drupal::service('config.storage');
-    $configStorage->write(
-      'commerce_checkout.commerce_checkout_flow.default',
-      $source->read('commerce_checkout.commerce_checkout_flow.default')
+    static::readConfig(
+      $configPath,
+      'commerce_checkout.commerce_checkout_flow.default'
     );
   }
 

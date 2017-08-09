@@ -1,6 +1,13 @@
-'use strict';
+import collapse from 'bootstrap-sass/assets/javascripts/bootstrap/collapse.js';
+import transition from 'bootstrap-sass/assets/javascripts/bootstrap/transition.js';
 
-(function($, window, document) {
+(function ($, window, document) {
+
+  let addDependency = (dep) => dep;
+
+  // Add dependencies here to include them in the compiled output.
+  addDependency(collapse);
+  addDependency(transition);
 
   let f = {
     addToCartInList: (el) => {
@@ -12,7 +19,7 @@
     }
   };
 
-  $(document).ready( () => {
+  $(document).ready(() => {
     $('[data-action="cart"]').on('click', (el) => {
       f.addToCartInList(el);
     });

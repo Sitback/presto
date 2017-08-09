@@ -8,7 +8,7 @@ entity_browser_view:
     component:
       css/media_entity_browser.view.css: {}
   js:
-    js/media_entity_browser.view.js: {}
+    js/compiled/media_entity_browser.view.js: {}
   dependencies:
     - core/jquery
     - core/drupal

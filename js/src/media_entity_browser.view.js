@@ -7,21 +7,18 @@
  * file.
  */
 
-/*global Drupal drupalSettings*/
+/* global Drupal drupalSettings */
 
 (function ($) {
-
-  'use strict';
 
   /**
    * Attaches the behavior of the media entity browser view.
    */
   Drupal.behaviors.mediaEntityBrowserView = {
-    attach: function (context, settings) {
-
+    attach(context/* , settings */) {
       $('.views-row', context).each(function () {
-        var $row = $(this);
-        var $input = $row.find('.views-field-entity-browser-select input');
+        let $row = $(this);
+        let $input = $row.find('.views-field-entity-browser-select input');
 
         // When Auto Select functionality is enabled, then select entity
         // on click, without marking it as selected.
