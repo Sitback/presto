@@ -3,17 +3,23 @@ status: true
 dependencies:
   module:
     - social_media
+    - system
   theme:
     - presto_theme
 id: presto_theme_socialsharingblock
 theme: presto_theme
-region: footer
-weight: -7
+region: content
+weight: -5
 provider: null
 plugin: social_sharing_block
 settings:
   id: social_sharing_block
   label: 'Share this'
   provider: social_media
-  label_display: visible
-visibility: {  }
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/products/*\r\n/articles/*"
+    negate: false
+    context_mapping: {  }

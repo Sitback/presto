@@ -1,0 +1,103 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_media_links
+  theme:
+    - presto_theme
+id: socialmedialinks
+theme: presto_theme
+region: footer
+weight: -8
+provider: null
+plugin: social_media_links_block
+settings:
+  id: social_media_links_block
+  label: 'Social Media Links'
+  provider: social_media_links
+  label_display: '0'
+  platforms:
+    facebook:
+      value: sitbacksydney
+      description: ''
+      weight: '-28'
+    linkedin:
+      value: company/sitback-solutions
+      description: ''
+      weight: '-27'
+    twitter:
+      value: sitback
+      description: ''
+      weight: '-26'
+    email:
+      value: hello@sitback.com.au
+      description: ''
+      weight: '-25'
+    behance:
+      value: ''
+      description: ''
+      weight: '-24'
+    bitbucket:
+      value: ''
+      description: ''
+      weight: '-23'
+    contact:
+      value: ''
+      description: ''
+      weight: '-22'
+    drupal:
+      value: ''
+      description: ''
+      weight: '-21'
+    github:
+      value: ''
+      description: ''
+      weight: '-20'
+    googleplus:
+      value: ''
+      description: ''
+      weight: '-19'
+    instagram:
+      value: ''
+      description: ''
+      weight: '-18'
+    pinterest:
+      value: ''
+      description: ''
+      weight: '-17'
+    rss:
+      value: ''
+      description: ''
+      weight: '-16'
+    slideshare:
+      value: ''
+      description: ''
+      weight: '-15'
+    tumblr:
+      value: ''
+      description: ''
+      weight: '-14'
+    vimeo:
+      value: ''
+      description: ''
+      weight: '-13'
+    youtube:
+      value: ''
+      description: ''
+      weight: '-12'
+    youtube_channel:
+      value: ''
+      description: ''
+      weight: '-11'
+  appearance:
+    orientation: h
+    show_name: 0
+  link_attributes:
+    target: '<none>'
+    rel: '<none>'
+  iconset:
+    style: 'fontawesome:2x'
+    installed_iconsets:
+      fontawesome:
+        examples: ''
+visibility: {  }

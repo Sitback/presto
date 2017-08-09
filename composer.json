@@ -68,6 +68,7 @@
         "drupal/slick": "1.x-dev",
         "drupal/slick_media": "1.x-dev",
         "drupal/social_media": "1.x-dev#5842dec",
+        "drupal/social_media_links": "^2.4",
         "drupal/token": "^1.0",
         "drupal/video_embed_field": "^1.5",
         "drupal/view_mode_selector": "1.x-dev",
