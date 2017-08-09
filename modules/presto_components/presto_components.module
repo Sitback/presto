@@ -55,7 +55,6 @@ function presto_components_theme_suggestions_paragraph_alter(array &$suggestions
   $suggestions[] = "paragraph__{$type}";
 }
 
-
 /**
  * Prepares variables for paragraph templates.
  *
@@ -71,7 +70,7 @@ function presto_components_theme_suggestions_paragraph_alter(array &$suggestions
  *   - paragraph: The paragraph object.
  *   - view_mode: View mode; e.g., 'full', 'teaser'...
  */
-function presto_components_preprocess_paragraph(&$variables) {
+function presto_components_preprocess_paragraph(array &$variables) {
   $paragraph = $variables['elements']['#paragraph'];
   $type = $paragraph->getType();
   $id = $paragraph->id();
@@ -84,4 +83,3 @@ function presto_components_preprocess_paragraph(&$variables) {
     $variables['parent_paragraph_type_id'] = "{$parent_type}_{$parent_id}";
   }
 }
-
