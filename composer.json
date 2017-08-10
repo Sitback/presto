@@ -75,7 +75,8 @@
         "swiftmailer/swiftmailer": "^5.4.8",
         "npm-asset/blazy": "^1",
         "npm-asset/dropzone": "^4",
-        "npm-asset/slick-carousel": "^1"
+        "npm-asset/slick-carousel": "^1",
+        "drupal/entity_embed": "^1.0@beta"
     },
     "require-dev": {
         "behat/mink": "~1.7",

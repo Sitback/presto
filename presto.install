@@ -128,6 +128,7 @@ function presto_install() {
  *
  * @return array
  *   Batch definition
+ * @throws \Drupal\Component\Plugin\Exception\PluginException
  */
 function presto_apply_configuration(array &$install_state) {
   $batch = [
@@ -135,6 +136,15 @@ function presto_apply_configuration(array &$install_state) {
     'error_message' => t('The installer has encountered an error.'),
     'operations' => [],
   ];
+
+  // Install modules and create demo content if eCommerce is enabled.
+  /** @var Drupal\presto\Installer\InstallerInterface $ecommerceInstaller */
+  $ecommerceInstaller = Drupal::service('presto.installer.ecommerce');
+  $ecommerceInstaller->setInstallState((array) $install_state);
+  $batch['operations'] = array_merge(
+    $batch['operations'],
+    $ecommerceInstaller->installIfEnabled()
+  );
 
   // Install optional dependencies if they're enabled.
   /** @var \Drupal\presto\Installer\InstallerInterface $optionalDepsInstaller */
@@ -145,14 +155,6 @@ function presto_apply_configuration(array &$install_state) {
     $optionalDepsInstaller->installIfEnabled()
   );
 
-  // Install modules and create demo content if eCommerce is enabled.
-  /** @var Drupal\presto\Installer\InstallerInterface $ecommerceInstaller */
-  $ecommerceInstaller = Drupal::service('presto.installer.ecommerce');
-  $ecommerceInstaller->setInstallState((array) $install_state);
-  $batch['operations'] = array_merge(
-    $batch['operations'],
-    $ecommerceInstaller->installIfEnabled()
-  );
 
   return $batch;
 }

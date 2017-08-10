@@ -20,6 +20,7 @@ dependencies:
   - dynamic_page_cache
   - editor
   - entity_browser
+  - entity_embed
   - field_ui
   - file
   - help

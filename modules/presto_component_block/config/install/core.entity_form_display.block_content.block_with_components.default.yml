@@ -15,8 +15,8 @@ content:
     type: paragraphs
     weight: 26
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
+      title: Component
+      title_plural: Components
       edit_mode: preview
       add_mode: dropdown
       form_display_mode: default
