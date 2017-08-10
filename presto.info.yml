@@ -20,6 +20,7 @@ dependencies:
   - dynamic_page_cache
   - editor
   - entity_browser
+  - entity_embed
   - field_ui
   - file
   - help
@@ -61,6 +62,7 @@ dependencies:
   - token
   - video_embed_field
   - view_mode_selector
+  - social_media_links
   # Custom
   - presto_components
   - presto_contact

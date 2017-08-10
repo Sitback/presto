@@ -1,0 +1,52 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.image
+    - views.view.media_browser
+  module:
+    - dropzonejs_eb_widget
+    - media_entity
+    - views
+name: media_entity_browser_for_media_embed
+label: 'Media Entity Browser For Media Embed'
+display: iframe
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select entities'
+  auto_open: true
+selection_display: multi_step_display
+selection_display_configuration:
+  entity_type: media
+  display: rendered_entity
+  display_settings:
+    view_mode: media_browser
+  select_text: 'Use selected'
+  selection_hidden: false
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  6e4eaee6-0d0c-4c91-b158-ba0f4269f47b:
+    settings:
+      view: media_browser
+      view_display: entity_browser_1
+      submit_text: 'Select Media'
+      auto_select: true
+    uuid: 6e4eaee6-0d0c-4c91-b158-ba0f4269f47b
+    weight: -10
+    label: 'Select existing'
+    id: view
+  3f5bba95-24c4-493f-a533-9d64991b9e72:
+    settings:
+      media_entity_bundle: image
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Drop files here to upload them'
+      max_filesize: 100M
+      extensions: 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp'
+      submit_text: 'Import media'
+      auto_select: true
+    uuid: 3f5bba95-24c4-493f-a533-9d64991b9e72
+    weight: 2
+    label: 'Import media'
+    id: dropzonejs_media_entity

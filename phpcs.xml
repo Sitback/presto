@@ -13,6 +13,9 @@
   <!-- Tests. -->
   <file>./tests</file>
 
+  <!-- Exclude compiled JS. -->
+  <exclude-pattern>*/js/compiled/*</exclude-pattern>
+
   <!-- Drupal's PHP & JS files -->
   <arg name="extensions" value="php,module,inc,install,test,profile,theme,js" />
 

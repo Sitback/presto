@@ -1,16 +1,41 @@
+.page-node-type-article {
+
+  .page-header {
+    margin-bottom: .25em;
+  }
+}
+
+.layout--onecol,
 [typeof="schema:Article"] {
 
   .field--name-field-published-on {
-    @extend %container;
 
-    .field--label {
-      display: none;
-    }
+      .field--label {
+        display: none;
+      }
 
-    .field--item {
-        text-align: right;
-        margin-top: -2em;
-        margin-bottom: 2em;
+      .field--item {
+        @extend %container;
+        position: relative;
+        top: -1.8em;
+        display: inline;
+        padding-right: 0;
+
+        @media screen and (max-width: 426px) {
+          text-align: right;
+          top: 0;
+          display: block;
+          padding: 1em 15px 1em 0;
+        }
+
+        time {
+          font-size: 90%;
+          @extend .lowlight;
+
+          @media screen and (min-width: 426px) {
+            color: $black;
+          }
+        }
 
       * {
         font-family: $headingFont;

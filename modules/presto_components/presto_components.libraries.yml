@@ -1,0 +1,7 @@
+iconbox_conditional_display:
+  js:
+    js/compiled/iconbox_conditional_display.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal

@@ -1,2 +1,3 @@
 js/compiled/**/*.js
 themes/presto_theme/js/compiled/**/*.js
+modules/**/js/compiled/**/*.js

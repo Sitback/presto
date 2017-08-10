@@ -25,12 +25,10 @@ content:
   variations:
     type: commerce_add_to_cart
     weight: 10
-    label: visually_hidden
+    label: above
     settings:
       combine: true
-    third_party_settings:
-      ds:
-        ds_limit: ''
+    third_party_settings: {  }
     region: content
 hidden:
   created: true

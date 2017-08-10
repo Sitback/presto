@@ -44,7 +44,6 @@ module.exports = (gulp/* , callback */) => {
     }, webpack))
     .on('error', function (err) {
       gutil.log('WEBPACK ERROR', err.message);
-      this.emit('end');
     })
     .pipe(gulp.dest(paths.DEST.js));
 };
