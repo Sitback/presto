@@ -22,5 +22,4 @@ global-styling:
     js/compiled/presto.js: { weight: -20, defer: false, minified: true }
   dependencies:
     - core/drupal
-    # - core/jquery
     - core/drupalSettings

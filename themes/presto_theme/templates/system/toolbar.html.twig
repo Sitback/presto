@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Default theme implementation for the administrative toolbar.
+ * Theme override for the administrative toolbar.
  *
  * Available variables:
  * - attributes: HTML attributes for the wrapper.
@@ -18,12 +18,10 @@
  * - remainder: Any non-tray, non-tab elements left to be rendered.
  *
  * @see template_preprocess_toolbar()
- *
- * @ingroup themeable
  */
 #}
 <div{{ attributes.addClass('toolbar') }}>
-  <nav{{ toolbar_attributes.addClass('toolbar-bar clearfix') }}>
+  <nav{{ toolbar_attributes.addClass('toolbar-bar', 'clearfix') }}>
     <h2 class="visually-hidden">{{ toolbar_heading }}</h2>
     {% for key, tab in tabs %}
       {% set tray = trays[key] %}
@@ -32,13 +30,13 @@
         {% spaceless %}
           <div{{ tray.attributes }}>
             {% if tray.label %}
-              <nav class="toolbar-lining clearfix" role="navigation" aria-label="{{ tray.label }}">
-                <h3 class="toolbar-tray-name visually-hidden">{{ tray.label }}</h3>
-            {% else %}
+            <nav class="toolbar-lining clearfix" role="navigation" aria-label="{{ tray.label }}">
+              <h3 class="toolbar-tray-name visually-hidden">{{ tray.label }}</h3>
+              {% else %}
               <nav class="toolbar-lining clearfix" role="navigation">
-            {% endif %}
-            {{ tray.links }}
-            </nav>
+                {% endif %}
+                {{ tray.links }}
+              </nav>
           </div>
         {% endspaceless %}
       </div>

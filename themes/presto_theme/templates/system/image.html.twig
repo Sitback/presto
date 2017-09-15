@@ -1,19 +1,18 @@
 {#
 /**
  * @file
- * Default theme implementation of an image.
+ * Theme override of an image.
  *
  * Available variables:
  * - attributes: HTML attributes for the img tag.
  * - style_name: (optional) The name of the image style applied.
  *
- * @ingroup templates
- *
  * @see template_preprocess_image()
  */
 #}
-{% set classes = [
-  theme.settings.image_shape ? theme.settings.image_shape,
-  theme.settings.image_responsive ? 'img-fluid',
-] %}
+{%
+set classes = [
+style_name ? 'image-style-' ~ style_name|clean_class,
+]
+%}
 <img{{ attributes.addClass(classes) }} />

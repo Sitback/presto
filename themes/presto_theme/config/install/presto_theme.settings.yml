@@ -1,8 +1,26 @@
-cdn_provider: ''
-fluid_container: 1
-table_responsive: '-1'
-modal_enabled: 0
-popover_enabled: 0
-tooltip_enabled: 0
-presto_theme_browsersync_enable: 0
-table: ''
+# Layout
+# --------------
+bootstrap_barrio_sidebar_position: 'both'
+bootstrap_barrio_content_offset: 0
+bootstrap_barrio_sidebar_first_width: 3
+bootstrap_barrio_sidebar_first_offset: 0
+bootstrap_barrio_sidebar_second_width: 3
+bootstrap_barrio_sidebar_second_offset: 0
+
+# Container
+# --------------
+bootstrap_barrio_fluid_container: 1
+
+# Buttons
+# --------------
+bootstrap_barrio_button_size: ''
+bootstrap_barrio_button_outline: 0
+
+# Navbar
+# --------------
+bootstrap_barrio_navbar_top_position: ''
+bootstrap_barrio_navbar_top_color: 0
+bootstrap_barrio_navbar_top_background: 'faded'
+bootstrap_barrio_navbar_position: ''
+bootstrap_barrio_navbar_color: 'dark'
+bootstrap_barrio_navbar_background: 'inverse'
