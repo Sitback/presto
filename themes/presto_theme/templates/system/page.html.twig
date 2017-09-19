@@ -70,48 +70,39 @@
 #}
 
 {% block head %}
-  {% if page.secondary_menu or page.page.top_header or page.top_header_form %}
-  <nav{{ navbar_top_attributes }}>
+  <nav{{ navbar_attributes.removeClass('navbar-default').addClass('navbar-light bg-light justify-content-between') }}>
     {% if container_navbar %}
     <div class="container">
     {% endif %}
-    <div class="navbar-brand">
+      <div class="navbar-brand">
         {{ page.header }}
       </div>
-      {% if page.top_header_form %}
-        <div class="form-inline navbar-form float-right">
-          {{ page.top_header_form }}
+      {% if page.primary_menu or page.header_form %}
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div>
+          <div class="collapse navbar-collapse" id="CollapsingNavbar">
+            {{ page.primary_menu }}
+            {% if page.header_form %}
+              <div class="form-inline navbar-form float-right">
+                {{ page.header_form }}
+              </div>
+            {% endif %}
+          </div>
         </div>
       {% endif %}
-      {% if page.secondary_menu or page.top_header %}
-        <div class="navbar-nav float-right">
-          {{ page.secondary_menu }}
-          {{ page.top_header }}
-        </ div>
+      {% if sidebar_collapse %}
+        <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#CollapsingLeft" aria-controls="CollapsingLeft" aria-expanded="false" aria-label="Toggle navigation"></button>
       {% endif %}
-    {% if container_navbar %}
-    </div>
-    {% endif %}
-  </nav>
-  {% endif %}
-  <nav{{ navbar_attributes }}>
-    {% if container_navbar %}
-    <div class="container">
-    {% endif %}
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="CollapsingNavbar">
-        {{ page.primary_menu }}
-        {% if page.header_form %}
-          <div class="form-inline navbar-form float-right">
-            {{ page.header_form }}
-          </div>
-        {% endif %}
-      </div>
     {% if container_navbar %}
     </div>
     {% endif %}
   </nav>
 {% endblock %}
+
+
+
+
+
 
 {% block content %}
   <div id="main" class="{{ container }}">

@@ -10,7 +10,7 @@
 }
 
 .cart-empty-page {
-  @extend %container;
+  @extend .container;
 }
 
 .layout-region-checkout-secondary {
@@ -28,7 +28,7 @@
 }
 
 .cart-form {
-  @extend %container;
+  @extend .container;
 
   .table {
     margin-bottom: 0;
@@ -157,7 +157,7 @@
 }
 
 .layout-checkout-form {
-  @extend %container;
+  @extend .container;
 
   .panel {
     padding: 0 1.3em 2em;

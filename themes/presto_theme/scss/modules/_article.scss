@@ -15,7 +15,7 @@
       }
 
       .field--item {
-        @extend %container;
+        @extend .container;
         position: relative;
         top: -1.8em;
         display: inline;
@@ -63,7 +63,7 @@
   }
 
   .field--name-body {
-    @extend %container;
+    @extend .container;
 
     p {
       margin-top: 0;
@@ -92,7 +92,7 @@
 
 .path-frontpage .view-content,
 [class*="articles-listing"] {
-  @extend %container;
+  @extend .container;
 
   .views-row {
 

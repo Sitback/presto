@@ -1,5 +1,5 @@
 .product-details {
-  @extend %container;
+  @extend .container;
 
   .field--name-title {
     @extend h2;

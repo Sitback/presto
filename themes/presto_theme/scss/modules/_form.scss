@@ -1,5 +1,5 @@
 .contact-form {
-  @extend %container;
+  @extend .container;
   label {
     &::after {
       margin-left: .25em;

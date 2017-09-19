@@ -6,7 +6,7 @@
   border-top: 2px solid $footerBorderColor;
 
   .region-footer {
-    @extend %container;
+    @extend .container;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

@@ -26,5 +26,4 @@ require('lity');
       f.addToCartInList(el);
     });
   });
-
 }(jQuery, window, document));

@@ -1,5 +1,5 @@
 .alert {
-  @extend %container;
+  @extend .container;
   flex-grow: 1;
   padding: 2em;
   text-align: center;
