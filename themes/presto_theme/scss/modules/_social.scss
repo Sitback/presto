@@ -1,7 +1,5 @@
 .footer {
-
   .block-social-media-links {
-
     ul {
       display: flex;
       flex-direction: row;
@@ -13,10 +11,8 @@
     }
 
     a {
-      border-bottom: .15em solid $footerLinkColor;
       padding: 0 1em .25em;
       display: block;
-
       transition: border-color .5s;
 
       .fa {
@@ -38,6 +34,7 @@
 .social-sharing-block {
   background: $socialSharingBannerBackground;
   margin-top: 2em;
+  padding-bottom: 20px;
 
   .social-media-sharing {
     @extend .container;
@@ -48,6 +45,7 @@
       display: flex;
       justify-content: flex-end;
       margin-bottom: 0;
+
       @media screen and (max-width: 425px) {
         justify-content: center;
       }
@@ -56,6 +54,7 @@
     li {
       line-height: 1;
       margin: 0;
+
       @media screen and (max-width: 425px) {
         flex-grow: 1;
       }
@@ -95,7 +94,6 @@
         }
 
         &:hover {
-
           &::before {
             color: $footerLinkColor;
           }

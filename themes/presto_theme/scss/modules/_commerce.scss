@@ -14,9 +14,7 @@
 }
 
 .layout-region-checkout-secondary {
-
   .order-total-line {
-
     &.order-total-line__subtotal {
       @extend h4;
     }
@@ -41,7 +39,6 @@
 
   th,
   td {
-
     &.views-field-unit-price__number {
       display: none;
     }
@@ -58,7 +55,6 @@
   .order-total-line-value,
   .views-field-total-price__number {
     font-size: 150%;
-    font-family: monospace;
     text-align: right;
   }
 
@@ -90,7 +86,6 @@
   }
 
   .form-actions {
-
     button + button {
       margin-left: 1em;
     }
@@ -134,7 +129,6 @@
   }
 
   .glyphicon-ok {
-
     &::before {
       content: '\f021';
       font-family: FontAwesome;
@@ -145,7 +139,6 @@
   }
 
   .glyphicon-trash {
-
     &::before {
       content: '\f014';
       font-family: FontAwesome;
@@ -154,6 +147,10 @@
       margin-left: 1em;
     }
   }
+}
+
+.cart-block--summary__count {
+  vertical-align: top;
 }
 
 .layout-checkout-form {

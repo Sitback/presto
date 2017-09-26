@@ -5,7 +5,6 @@
   @extend .container;
 
   .slick-arrow {
-
     &::before {
       color: $slideshowControlColor;
     }

@@ -16,7 +16,6 @@
     }
 
     &:hover {
-
       img {
         transform: scale(1);
       }
@@ -57,12 +56,8 @@
   }
 
   &[class*='image_with_'] {
-
     a {
-
       &:hover {
-
-
         figcaption {
           opacity: 1;
 
@@ -78,9 +73,7 @@
   }
 
   &.image_with_caption_below {
-
     a {
-
       figcaption {
         opacity: 1;
         background: $imageCaptionBackgroundColor;
@@ -95,13 +88,10 @@
       }
 
       &:hover {
-
-
         figcaption {
           opacity: 1;
 
           + .field--name-field-media {
-
             img {
               transform: scale(1);
             }
@@ -110,5 +100,4 @@
       }
     }
   }
-
 }

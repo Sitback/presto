@@ -37,4 +37,4 @@ regions:
 libraries-override:
   # Remove an entire library.
   core/jquery: false
-  bootstrap_barrio/global-components: false
+  bootstrap_barrio/global-styling: false

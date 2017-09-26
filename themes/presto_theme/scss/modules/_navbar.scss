@@ -6,70 +6,55 @@
   border-bottom: 2px solid $mainMenuBorderColor;
 
   &.navbar-light {
+    .navbar-brand {
+      display: flex;
+      align-content: flex-start;
 
-    .navbar-header {
-      margin: 0;
-      // width: 100%;
-      display: block;
-
-      @include media-breakpoint-up(md) {
-        display: flex;
-      }
-
-      // .region-header {
-      //   @extend .clearfix;
-      // }
-
-      .navbar-brand {
-        display: flex;
-        align-content: flex-start;
-
-        .logo {
+      .site-logo {
+        img {
           display: block;
           width: auto;
           height: 1.325rem;
-          padding: 10px 15px 5px;
+          padding: 2px 15px;
           box-sizing: content-box;
         }
-      }
-
-      .name {
-        display: block;
-        color: $boulder;
-        padding: 10px;
       }
     }
 
-    .navbar-nav {
-      > .nav-item {
-        &.active {
-          > a.nav-link {
-            color: $mainMenuLinkColorHover;
-            border-bottom-color: $mainMenuLinkBorderColorActive;
-          }
+    .site-name-slogan {
+      display: block;
+      color: $boulder;
+      padding: 10px;
+    }
+  }
+
+  .navbar-nav {
+    > .nav-item {
+      &.active {
+        > a.nav-link {
+          color: $mainMenuLinkColorHover;
+          border-bottom-color: $mainMenuLinkBorderColorActive;
+        }
+      }
+
+      > a.nav-link {
+        color: $mainMenuLinkColor;
+        border-bottom: 2px solid $mainMenuLinkBorderColor;
+        margin-bottom: -2px;
+        padding-left: 2.5em;
+        padding-right: 2.5em;
+        box-sizing: content-box;
+        text-align: center;
+        font-size: 14px;
+
+        @include media-breakpoint-up(md) {
+          text-align: left;
         }
 
-        > a.nav-link {
-          color: $mainMenuLinkColor;
-          border-bottom: 2px solid $mainMenuLinkBorderColor;
-          margin-bottom: -2px;
-          padding-left: 2.5em;
-          padding-right: 2.5em;
-          box-sizing: content-box;
-          text-align: center;
-          font-size: 14px;
-
-          @include media-breakpoint-up(md) {
-            text-align: left;
-          }
-
-
-
-          &:hover {
-            color: $mainMenuLinkColorHover;
-            border-bottom-color: $mainMenuLinkBorderColorHover;
-            background: $mainMenuBackgroundHover;
-          }
+        &:hover {
+          color: $mainMenuLinkColorHover;
+          border-bottom-color: $mainMenuLinkBorderColorHover;
+          background: $mainMenuBackgroundHover;
         }
       }
     }
@@ -93,19 +78,14 @@
       margin-left: -15px;
     }
   }
+}
 
-  // &.collapse:not(.in),
-  // &.collapsing {
-  //   position: relative;
-  //   height: 0;
-  //   overflow: hidden;
-  //   transition: ease .35s height, visibility;
-  // }
+.navbar-text {
+  font-size: 14px;
 }
 
 .region-navigation,
 .region-navigation-collapsible {
-
   @include media-breakpoint-up(md) {
     display: flex;
     justify-content: flex-end;
