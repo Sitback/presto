@@ -12,6 +12,12 @@
   }
 }
 
+input {
+  &.form-text {
+    @extend .form-control;
+  }
+}
+
 .form-control {
   &:focus {
     border-color: $formInputBorderColor;
