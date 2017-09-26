@@ -20,8 +20,10 @@
   {% endif %}
   {% if site_name or site_slogan %}
     <div class="float-left site-name-slogan">
-      {% if site_name %}
-        <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+      {% if not site_logo %}
+        {% if site_name  %}
+          <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+        {% endif %}
       {% endif %}
       {% if site_slogan %}
         <div class="navbar-text site-branding__slogan">{{ site_slogan }}</div>

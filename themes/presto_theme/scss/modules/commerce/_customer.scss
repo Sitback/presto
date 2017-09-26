@@ -1,7 +1,7 @@
 .user-customer {
 
   .views-element-container {
-    @extend %container;
+    @extend .container;
 
     &:first-line {
       // This is the "Active Customer" heading

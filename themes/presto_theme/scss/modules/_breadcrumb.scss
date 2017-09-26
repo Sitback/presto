@@ -1,8 +1,6 @@
 ol.breadcrumb {
-//  @extend %container;
   background: transparent;
   margin-top: 10px;
-  // margin-bottom: -45px;
 
   > li {
     font-family: $headingFont;
@@ -18,7 +16,6 @@ ol.breadcrumb {
     }
 
     + li {
-
       &::before {
         content: '::';
         padding: 0 .2em;

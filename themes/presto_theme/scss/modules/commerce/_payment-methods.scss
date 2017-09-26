@@ -1,13 +1,13 @@
 .user-payment-methods {
 
   .local-actions {
-    @extend %container;
+    @extend .container;
     text-align: right;
     margin-top: 1em;
   }
 
   .commerce-payment-method-add-form {
-    @extend %container;
+    @extend .container;
 
     .credit-card-form {
       @extend .clearfix;
@@ -62,7 +62,7 @@
   }
 
   .table-responsive {
-    @extend %container;
+    @extend .container;
 
     thead {
 
@@ -92,7 +92,6 @@
 
           .delete {
             // targets delete links
-
             a {
               @extend .btn-danger;
 

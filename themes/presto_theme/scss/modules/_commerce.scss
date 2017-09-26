@@ -10,13 +10,11 @@
 }
 
 .cart-empty-page {
-  @extend %container;
+  @extend .container;
 }
 
 .layout-region-checkout-secondary {
-
   .order-total-line {
-
     &.order-total-line__subtotal {
       @extend h4;
     }
@@ -28,7 +26,7 @@
 }
 
 .cart-form {
-  @extend %container;
+  @extend .container;
 
   .table {
     margin-bottom: 0;
@@ -41,7 +39,6 @@
 
   th,
   td {
-
     &.views-field-unit-price__number {
       display: none;
     }
@@ -58,7 +55,6 @@
   .order-total-line-value,
   .views-field-total-price__number {
     font-size: 150%;
-    font-family: monospace;
     text-align: right;
   }
 
@@ -90,7 +86,6 @@
   }
 
   .form-actions {
-
     button + button {
       margin-left: 1em;
     }
@@ -134,7 +129,6 @@
   }
 
   .glyphicon-ok {
-
     &::before {
       content: '\f021';
       font-family: FontAwesome;
@@ -145,7 +139,6 @@
   }
 
   .glyphicon-trash {
-
     &::before {
       content: '\f014';
       font-family: FontAwesome;
@@ -156,8 +149,12 @@
   }
 }
 
+.cart-block--summary__count {
+  vertical-align: top;
+}
+
 .layout-checkout-form {
-  @extend %container;
+  @extend .container;
 
   .panel {
     padding: 0 1.3em 2em;

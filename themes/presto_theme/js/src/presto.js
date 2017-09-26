@@ -1,11 +1,13 @@
 
 
 let $ = require('jquery');
+window.jquery = $;
 window.jQuery = $;
 window.$ = $;
 
-let tether = require('tether'); // This is a pre-requisite for bootstrap 4 tooltips.
-window.Tether = tether;
+// popper is a pre-requisite for bootstrap 4 dropdowns.
+let popper = require('popper.js');
+window.Popper = popper;
 
 require('bootstrap');
 require('lity');
@@ -26,5 +28,4 @@ require('lity');
       f.addToCartInList(el);
     });
   });
-
 }(jQuery, window, document));
