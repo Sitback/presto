@@ -1,5 +1,5 @@
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.footer
@@ -9,8 +9,8 @@ dependencies:
     - presto_theme
 id: presto_theme_footer
 theme: presto_theme
-region: footer
-weight: -8
+region: header
+weight: -7
 provider: null
 plugin: 'system_menu_block:footer'
 settings:

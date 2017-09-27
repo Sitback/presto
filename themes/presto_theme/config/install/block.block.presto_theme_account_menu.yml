@@ -9,8 +9,8 @@ dependencies:
     - presto_theme
 id: presto_theme_account_menu
 theme: presto_theme
-region: navigation_collapsible
-weight: -7
+region: primary_menu
+weight: -8
 provider: null
 plugin: 'system_menu_block:account'
 settings:

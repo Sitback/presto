@@ -6,7 +6,7 @@ dependencies:
 id: presto_theme_local_tasks
 theme: presto_theme
 region: content
-weight: -8
+weight: -7
 provider: null
 plugin: local_tasks_block
 settings:

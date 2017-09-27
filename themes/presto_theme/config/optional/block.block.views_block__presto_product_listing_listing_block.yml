@@ -7,11 +7,11 @@ dependencies:
     - system
     - views
   theme:
-    - presto_theme
-id: presto_theme_views_block__presto_product_listing_listing_block
-theme: presto_theme
+    - bartik
+id: views_block__presto_product_listing_listing_block
+theme: bartik
 region: content
-weight: -2
+weight: 10
 provider: null
 plugin: 'views_block:presto_product_listing-listing_block'
 settings:
