@@ -44,9 +44,9 @@
         "drupal/big_pipe_sessionless": "^1.0",
         "drupal/block_field": "^1.0@alpha",
         "drupal/bootstrap": "^3.5",
-        "drupal/commerce": "^2.0@rc",
+        "drupal/commerce": "^2.0",
         "drupal/commerce_shipping": "^2.0@beta",
-        "drupal/commerce_stripe": "1.x-dev#6604117",
+        "drupal/bootstrap_barrio": "^4.6",
         "drupal/contact_block": "^1.4",
         "drupal/contact_storage": "^1.0@beta",
         "drupal/core": "~8.3.3",
@@ -67,8 +67,8 @@
         "drupal/simple_sitemap": "^2.9",
         "drupal/slick": "1.x-dev",
         "drupal/slick_media": "1.x-dev",
-        "drupal/social_media": "1.x-dev#5842dec",
-        "drupal/social_media_links": "^2.4",
+        "drupal/social_media": "^1.2",
+        "drupal/social_media_links": "2.x",
         "drupal/token": "^1.0",
         "drupal/video_embed_field": "^1.5",
         "drupal/view_mode_selector": "1.x-dev",
@@ -134,12 +134,6 @@
             "drush/contrib/{$name}": [
                 "type:drupal-drush"
             ]
-        },
-        "patches": {
-            "drupal/social_media": {
-                "Fix undefined index error (#2836382)":
-                    "https://www.drupal.org/files/issues/2836382-drupal-settings-undefined-index_1.patch"
-            }
         },
         "asset-library-overrides": {
             "swiftmailer/swiftmailer": {
