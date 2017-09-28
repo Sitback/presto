@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.physical_book
+    - field.field.commerce_product_variation.physical_book.attribute_book_binding
+    - field.field.commerce_product_variation.physical_book.dimensions
+    - field.field.commerce_product_variation.physical_book.weight
+  module:
+    - commerce_price
+id: commerce_product_variation.physical_book.default
+targetEntityType: commerce_product_variation
+bundle: physical_book
+mode: default
+content:
+  price:
+    label: hidden
+    type: commerce_price_default
+    weight: 1
+    region: content
+    settings:
+      strip_trailing_zeroes: false
+      display_currency_code: false
+    third_party_settings: {  }
+  sku:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  attribute_book_binding: true
+  dimensions: true
+  product_id: true
+  title: true
+  weight: true
