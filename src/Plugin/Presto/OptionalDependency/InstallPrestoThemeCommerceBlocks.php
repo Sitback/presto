@@ -108,7 +108,7 @@ class InstallPrestoThemeCommerceBlocks extends AbstractOptionalDependency {
         'provider' => 'commerce_cart',
         'label_display' => '0',
         'dropdown' => 'false',
-      ]
+      ],
     ]);
     $block->save();
   }
