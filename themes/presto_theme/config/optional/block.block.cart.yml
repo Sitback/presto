@@ -1,0 +1,21 @@
+uuid: e1dc8820-1ee4-45cb-9440-195bb6c95da4
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_cart
+  theme:
+    - presto_theme
+id: cart
+theme: presto_theme
+region: primary_menu
+weight: 0
+provider: null
+plugin: commerce_cart
+settings:
+  id: commerce_cart
+  label: Cart
+  provider: commerce_cart
+  label_display: '0'
+  dropdown: false
+visibility: {  }

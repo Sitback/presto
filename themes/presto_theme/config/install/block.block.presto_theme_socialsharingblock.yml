@@ -9,7 +9,7 @@ dependencies:
 id: presto_theme_socialsharingblock
 theme: presto_theme
 region: content
-weight: 1
+weight: 0
 provider: null
 plugin: social_sharing_block
 settings:

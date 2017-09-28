@@ -2,28 +2,28 @@ langcode: en
 status: true
 dependencies:
   config:
-    - views.view.presto_product_listing
+    - views.view.presto_articles_listing
   module:
     - system
     - views
   theme:
     - presto_theme
-id: presto_theme_views_block__presto_product_listing_listing_block
+id: views_block__presto_articles_listing_listing_block_2
 theme: presto_theme
 region: content
-weight: -3
+weight: -2
 provider: null
-plugin: 'views_block:presto_product_listing-listing_block'
+plugin: 'views_block:presto_articles_listing-listing_block'
 settings:
-  id: 'views_block:presto_product_listing-listing_block'
+  id: 'views_block:presto_articles_listing-listing_block'
   label: ''
   provider: views
-  label_display: '0'
+  label_display: visible
   views_label: ''
   items_per_page: none
 visibility:
   request_path:
     id: request_path
-    pages: /products
+    pages: articles
     negate: false
     context_mapping: {  }

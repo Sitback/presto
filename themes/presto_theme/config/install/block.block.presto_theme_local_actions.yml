@@ -6,7 +6,7 @@ dependencies:
 id: presto_theme_local_actions
 theme: presto_theme
 region: content
-weight: -6
+weight: -7
 provider: null
 plugin: local_actions_block
 settings:

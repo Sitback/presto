@@ -7,7 +7,7 @@ dependencies:
     - presto_theme
 id: presto_theme_powered
 theme: presto_theme
-region: navigation
+region: top_header
 weight: -6
 provider: null
 plugin: system_powered_by_block

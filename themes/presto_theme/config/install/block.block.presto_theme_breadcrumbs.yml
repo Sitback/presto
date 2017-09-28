@@ -8,7 +8,7 @@ dependencies:
 id: presto_theme_breadcrumbs
 theme: presto_theme
 region: content
-weight: -5
+weight: -6
 provider: null
 plugin: system_breadcrumb_block
 settings:
