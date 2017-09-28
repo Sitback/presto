@@ -5,7 +5,7 @@ dependencies:
     - commerce_cart
   theme:
     - presto_theme
-id: cart
+id: presto_theme_cart
 theme: presto_theme
 region: primary_menu
 weight: 0
