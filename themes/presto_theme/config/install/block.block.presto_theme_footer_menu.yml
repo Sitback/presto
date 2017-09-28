@@ -7,7 +7,7 @@ dependencies:
     - system
   theme:
     - presto_theme
-id: footer
+id: presto_theme_footer_menu
 theme: presto_theme
 region: footer_fifth
 weight: -8

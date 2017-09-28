@@ -5,9 +5,9 @@ dependencies:
     - social_media_links
   theme:
     - presto_theme
-id: socialmedialinks
+id: presto_theme_socialmedialinks
 theme: presto_theme
-region: footer
+region: footer_fifth
 weight: -8
 provider: null
 plugin: social_media_links_block
