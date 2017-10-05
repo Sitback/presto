@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-currencyCode: AUD
-name: 'Australian Dollar'
-numericCode: '036'
-symbol: A$
-fractionDigits: 2

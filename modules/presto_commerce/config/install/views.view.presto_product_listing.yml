@@ -65,7 +65,16 @@ display:
             offset_label: Offset
           quantity: 9
       style:
-        type: default
+        type: grid
+        options:
+          uses_fields: false
+          columns: 12
+          automatic_width: false
+          alignment: horizontal
+          col_class_default: false
+          col_class_custom: 'col-12 col-md-6 col-lg-4'
+          row_class_default: false
+          row_class_custom: row
       row:
         type: 'ds_entity:commerce_product'
       fields:

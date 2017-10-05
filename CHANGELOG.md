@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## 8.x-1.1-rc2 (1.1.0-rc.2)
+* Updated:
+  * Social media to 1.2 (from 1.x-dev)
+  * Simple sitemap to 2.10 (from 2.9)
+  * Profile to 1.0-rc1 (from 1.0-beta1)
+  * Paragraphs to 1.2 (from 1.1)
+  * Google analytics to 2.2 (from 2.1)
+  * Entity browser to 1.3 (from 1.1)
+  * Entity to 1.0-beta1 (from 1.0-alpha4)
+  * Commerce to 2.0 (from 2.0-rc1)
+* Removed:
+  * Commerce stripe
+
 ## 8.x-1.1-dev (1.1.0-rc.1)
 
 * Add Media Entity Embed functionality for WYSIWYG

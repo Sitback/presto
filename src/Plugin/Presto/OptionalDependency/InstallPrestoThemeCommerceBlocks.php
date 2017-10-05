@@ -93,6 +93,24 @@ class InstallPrestoThemeCommerceBlocks extends AbstractOptionalDependency {
       ],
     ]);
     $block->save();
+
+    $block = Block::create([
+      'id' => 'presto_theme_cart',
+      'status' => TRUE,
+      'plugin' => 'commerce_cart',
+      'weight' => 0,
+      'theme' => 'presto_theme',
+      'region' => 'primary_menu',
+      'visibility' => [],
+      'settings' => [
+        'id' => 'commerce_cart',
+        'label' => 'Cart',
+        'provider' => 'commerce_cart',
+        'label_display' => '0',
+        'dropdown' => 'false',
+      ],
+    ]);
+    $block->save();
   }
 
 }
