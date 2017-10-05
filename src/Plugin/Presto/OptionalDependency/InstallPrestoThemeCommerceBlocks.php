@@ -98,9 +98,9 @@ class InstallPrestoThemeCommerceBlocks extends AbstractOptionalDependency {
       'id' => 'presto_theme_cart',
       'status' => TRUE,
       'plugin' => 'commerce_cart',
-      'weight' => 0,
+      'weight' => 30,
       'theme' => 'presto_theme',
-      'region' => 'primary_menu',
+      'region' => 'navigation_collapsible',
       'visibility' => [],
       'settings' => [
         'id' => 'commerce_cart',
