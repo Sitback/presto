@@ -48,7 +48,7 @@
         "drupal/commerce_shipping": "^2.0@beta",
         "drupal/contact_block": "^1.4",
         "drupal/contact_storage": "^1.0@beta",
-        "drupal/core": "~8.3.3",
+        "drupal/core": "8.*",
         "drupal/dropzonejs": "^1.0@alpha",
         "drupal/ds": "^3.0",
         "drupal/entity_browser": "^1.0",
