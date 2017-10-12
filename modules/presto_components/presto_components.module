@@ -93,7 +93,7 @@ function presto_components_preprocess_paragraph(array &$variables) {
   $variables['paragraph_type_id'] = "{$type}_{$id}";
 
   if ($type === 'component_accordion_panel') {
-    $parent_entity = $paragraph->_referringItem->getEntity();
+    $parent_entity = $paragraph->getParentEntity();
     $parent_type = $parent_entity->getType();
     $parent_id = $parent_entity->id();
     $variables['parent_paragraph_type_id'] = "{$parent_type}_{$parent_id}";
