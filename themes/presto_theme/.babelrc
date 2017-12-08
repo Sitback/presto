@@ -1,3 +1,21 @@
 {
-  "presets": ["es2015"]
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": [
+          "last 2 versions",
+          "Firefox ESR",
+          "not ie < 11",
+          "not ie_mob <= 11",
+          "not op_mini all",
+          "not op_mob 12.1",
+          "not bb 7"
+        ]
+      },
+      "useBuiltIns": true,
+      "modules": false
+    }],
+    "react"
+  ],
+  "plugins": ["transform-es2015-modules-commonjs"]
 }

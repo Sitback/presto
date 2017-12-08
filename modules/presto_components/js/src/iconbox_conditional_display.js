@@ -3,23 +3,25 @@
  * Defines the behavior of paragraph Icon box form display.
  */
 
-(function ($, Drupal) {
-
+(($, Drupal) => {
   /**
    * Attaches the behavior of the media entity browser view.
    */
   Drupal.behaviors.paragraphIconBox = {
     attach(context/* , settings */) {
-      let conditionalDisplay = (event) => {
-        let $target = $(event.target);
-        let selected = $target.find('option:selected').val();
-        let $parentForm = $target.parents('.paragraphs-subform').first();
-        let $imageField = $parentForm.find(
-          '[data-drupal-selector*="-subform-field-media-wrapper"]'
-        );
-        let $iconField = $parentForm.find(
-          '[data-drupal-selector*="-subform-field-icon-wrapper"]'
-        );
+      setTimeout(() => {
+        $('[name*="field_body_paragraphs"][name*="subform"][name*="field_icon_box_type"]', context).triggerHandler('change');
+      }, 1000);
+
+      const conditionalDisplay = (event) => {
+        const $target = $(event.target);
+        const selected = $target.find('option:selected').val();
+        if (selected === 'undefined') {
+          return;
+        }
+        const $parentForm = $target.parents('.paragraphs-subform').first();
+        const $imageField = $parentForm.find('[data-drupal-selector*="-subform-field-media-wrapper"]');
+        const $iconField = $parentForm.find('[data-drupal-selector*="-subform-field-icon-wrapper"]');
 
         switch (selected.toLowerCase()) {
           case '_none':
@@ -45,16 +47,11 @@
         }
       };
 
-      // Trigger on each 'icon box' component form.
-      $(
-        '[name*="field_body_paragraphs"][name*="subform"][name*="field_icon_box_type"]',
-        context
-      ).once('paragraphIconBox').each(function () {
-        let $this = $(this);
+      $('[name*="field_body_paragraphs"][name*="subform"][name*="field_icon_box_type"]', context).once('paragraphIconBox').each((i, el) => {
+        const $this = $(el);
         $this.on('change', conditionalDisplay);
-        $this.trigger('change');
+        $this.triggerHandler('change');
       });
-    }
+    },
   };
-
-}(jQuery, window.Drupal));
+})(jQuery, window.Drupal);

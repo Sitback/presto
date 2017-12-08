@@ -1,26 +1,27 @@
 
+const $ = require('jquery');
 
-let $ = require('jquery');
 window.jquery = $;
 window.jQuery = $;
 window.$ = $;
 
 // popper is a pre-requisite for bootstrap 4 dropdowns.
-let popper = require('popper.js');
+const popper = require('popper.js');
+
 window.Popper = popper;
 
 require('bootstrap');
 require('lity');
 
-(function ($, window, document) {
-  let f = {
+((window, document) => {
+  const f = {
     addToCartInList: (el) => {
-      let $el = $(el.delegateTarget);
-      let $form = $el.parents('li.product-item').find('form').get(0);
+      const $el = $(el.delegateTarget);
+      const $form = $el.parents('li.product-item').find('form').get(0);
       if ($form) {
         $form.submit();
       }
-    }
+    },
   };
 
   $(document).ready(() => {
@@ -28,4 +29,4 @@ require('lity');
       f.addToCartInList(el);
     });
   });
-}(jQuery, window, document));
+})(window, document);

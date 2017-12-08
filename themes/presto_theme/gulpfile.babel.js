@@ -1,3 +1,5 @@
+'use strict';
+
 import gulp from 'gulp';
 import gulpRequireTasks from 'gulp-require-tasks';
 

@@ -7,6 +7,7 @@
   color: $siteButtonTextColor;
   background: $siteButtonBackgroundColor;
   transition: color .5s, background .75s, border-color 1s;
+  margin: 1px;
 
   &:hover {
     color: $siteButtonTextColorHover;
