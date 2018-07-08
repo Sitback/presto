@@ -55,7 +55,6 @@
         "drupal/entity_browser": "^1.0",
         "drupal/focal_point": "1.x-dev",
         "drupal/google_analytics": "^2.1",
-        "drupal/media_entity": "^1.6",
         "drupal/media_entity_image": "^1.2",
         "drupal/media_entity_slideshow": "^1.2",
         "drupal/memcache": "^2.0@alpha",

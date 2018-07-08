@@ -5,7 +5,7 @@ dependencies:
     - core.entity_view_mode.media.media_browser
     - field.field.media.image.field_image
     - image.style.media_browser
-    - media_entity.bundle.image
+    - media.type.image
   module:
     - image
 id: media.image.media_browser

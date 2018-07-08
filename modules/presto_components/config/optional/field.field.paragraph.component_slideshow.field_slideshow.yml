@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_slideshow
-    - media_entity.bundle.slideshow
+    - media.type.slideshow
     - paragraphs.paragraphs_type.component_slideshow
 id: paragraph.component_slideshow.field_slideshow
 field_name: field_slideshow
