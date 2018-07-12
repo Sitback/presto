@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_components
+    - paragraphs.paragraphs_type.component_row
+    - paragraphs.paragraphs_type.component_section
+  module:
+    - entity_reference_revisions
+id: paragraph.component_section.field_components
+field_name: field_components
+entity_type: paragraph
+bundle: component_section
+label: Components
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 1
+    target_bundles:
+      component_row: component_row
+      component_section: component_section
+field_type: entity_reference_revisions

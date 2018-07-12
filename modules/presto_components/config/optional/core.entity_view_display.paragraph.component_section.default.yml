@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.component_section.field_background_colour
+    - field.field.paragraph.component_section.field_components
+    - paragraphs.paragraphs_type.component_section
+  module:
+    - entity_reference_revisions
+id: paragraph.component_section.default
+targetEntityType: paragraph
+bundle: component_section
+mode: default
+content:
+  field_background_colour:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_components:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+hidden: {  }

@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Background-colour
+vid: background_colour
+description: 'Row and Section background colour'
+hierarchy: 0
+weight: 0
