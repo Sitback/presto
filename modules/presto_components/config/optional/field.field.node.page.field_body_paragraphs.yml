@@ -4,8 +4,12 @@ dependencies:
   config:
     - field.storage.node.field_body_paragraphs
     - node.type.page
+    - paragraphs.paragraphs_type.component_row
+    - paragraphs.paragraphs_type.component_section
   module:
     - entity_reference_revisions
+_core:
+  default_config_hash: 1jEHFWWK35embHYoL_A_RRSVzwLAoXndvcvEopbrSFw
 id: node.page.field_body_paragraphs
 field_name: field_body_paragraphs
 entity_type: node
@@ -19,5 +23,8 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles: null
+    negate: 0
+    target_bundles:
+      component_row: component_row
+      component_section: component_section
 field_type: entity_reference_revisions

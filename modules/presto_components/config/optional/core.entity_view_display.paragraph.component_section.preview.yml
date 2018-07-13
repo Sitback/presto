@@ -9,6 +9,8 @@ dependencies:
   module:
     - ds
     - entity_reference_revisions
+_core:
+  default_config_hash: y1Bgbb7TzTxt5wPWkUiWQx6VHjszV-EqmeLKpp5hk0E
 id: paragraph.component_section.preview
 targetEntityType: paragraph
 bundle: component_section

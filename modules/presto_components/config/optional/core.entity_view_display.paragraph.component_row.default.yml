@@ -6,7 +6,6 @@ dependencies:
     - field.field.paragraph.component_row.field_components
     - paragraphs.paragraphs_type.component_row
   module:
-    - ds
     - entity_reference_revisions
 id: paragraph.component_row.default
 targetEntityType: paragraph
@@ -24,12 +23,10 @@ content:
   field_components:
     type: entity_reference_revisions_entity_view
     weight: 1
+    region: content
     label: hidden
     settings:
       view_mode: default
       link: ''
-    third_party_settings:
-      ds:
-        ds_limit: ''
-    region: content
+    third_party_settings: {  }
 hidden: {  }

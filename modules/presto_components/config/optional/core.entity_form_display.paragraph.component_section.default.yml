@@ -7,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.component_section
   module:
     - paragraphs
+_core:
+  default_config_hash: 9IjLYIckx4ld1y1pstpCgDnZJamzOgjBfbtlSlaybZ4
 id: paragraph.component_section.default
 targetEntityType: paragraph
 bundle: component_section
