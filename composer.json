@@ -65,7 +65,7 @@
         "drupal/social_media": "^1.2",
         "drupal/social_media_links": "2.x",
         "drupal/token": "^1.0",
-        "drupal/video_embed_field": "^1.5",
+        "drupal/video_embed_field": "^2.0",
         "drupal/view_mode_selector": "1.x-dev",
         "drupal/swiftmailer": "^1.0@beta",
         "swiftmailer/swiftmailer": "^5.4.8",
