@@ -74,7 +74,7 @@
         "npm-asset/slick-carousel": "^1",
         "drupal/entity_embed": "^1.0@beta",
         "drupal/media_entity_slideshow": "2.0-alpha1",
-        "drupal/slick_media": "2.0-alpha1",
+        "drupal/slick_media": "2.0-alpha1"
     },
     "require-dev": {
         "behat/mink": "~1.7",
