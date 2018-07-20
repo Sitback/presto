@@ -48,8 +48,7 @@ dependencies:
   - focal_point
   - google_analytics
   - layout_discovery
-  - media_entity
-  - media_entity_image
+  - media
   - media_entity_slideshow
   - metatag
   - paragraphs
@@ -62,6 +61,7 @@ dependencies:
   - token
   - video_embed_field
   - view_mode_selector
+  - views_bulk_operations
   - social_media_links
   # Custom
   - presto_components

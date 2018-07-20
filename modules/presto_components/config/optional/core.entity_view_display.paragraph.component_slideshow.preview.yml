@@ -11,12 +11,12 @@ bundle: component_slideshow
 mode: preview
 content:
   field_slideshow:
+    type: entity_reference_entity_view
     weight: 0
+    region: content
     label: hidden
     settings:
       view_mode: icon_box
       link: false
     third_party_settings: {  }
-    type: entity_reference_entity_view
-    region: content
 hidden: {  }

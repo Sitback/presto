@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_slideshow
-    - media_entity.bundle.slideshow
+    - media.type.slideshow
     - paragraphs.paragraphs_type.component_slideshow
 id: paragraph.component_slideshow.field_slideshow
 field_name: field_slideshow
@@ -11,7 +11,7 @@ entity_type: paragraph
 bundle: component_slideshow
 label: Slideshow
 description: 'To create a slideshow, please go to Content > Media > Add new media > Slideshow'
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

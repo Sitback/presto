@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - media_entity.bundle.image
+    - media.type.image
     - views.view.image_browser
   module:
     - dropzonejs_eb_widget
-    - media_entity
+    - media
     - views
 name: media_browser_dropzone
 label: 'Media Browser Dropzone'
@@ -27,26 +27,32 @@ selection_display_configuration:
 widget_selector: tabs
 widget_selector_configuration: {  }
 widgets:
-  ec0926bd-c3db-4ce1-9231-7b2e967e6466:
+  9d73e96b-d904-4a61-9b03-b1d3f3171efd:
     settings:
       view: image_browser
       view_display: entity_browser_1
       submit_text: 'Select images'
       auto_select: true
-    uuid: ec0926bd-c3db-4ce1-9231-7b2e967e6466
+    uuid: 9d73e96b-d904-4a61-9b03-b1d3f3171efd
     weight: 1
     label: 'Select existing'
     id: view
-  6790a8ca-f72d-4ca4-ab2f-20b5c4d8ece9:
+  3bda5962-47a6-417a-bd44-2270f37d7591:
     settings:
-      media_entity_bundle: image
+      media_type: image
       upload_location: 'public://[date:custom:Y]-[date:custom:m]'
       dropzone_description: 'Drop files here to upload them'
       max_filesize: 100M
       extensions: 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp'
+      clientside_resize: false
+      resize_width: null
+      resize_height: null
+      resize_quality: !!float 1
+      resize_method: contain
+      thumbnail_method: contain
       submit_text: 'Import images'
       auto_select: true
-    uuid: 6790a8ca-f72d-4ca4-ab2f-20b5c4d8ece9
+    uuid: 3bda5962-47a6-417a-bd44-2270f37d7591
     weight: 2
     label: 'Import images'
     id: dropzonejs_media_entity

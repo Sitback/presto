@@ -4,14 +4,15 @@ dependencies:
   module:
     - file
     - image
-    - media_entity
+    - media
 id: media.field_image
 field_name: field_image
 entity_type: media
 type: image
 settings:
+  uri_scheme: public
   default_image:
-    uuid: null
+    uuid: ''
     alt: ''
     title: ''
     width: null
@@ -19,7 +20,6 @@ settings:
   target_type: file
   display_field: false
   display_default: false
-  uri_scheme: public
 module: image
 locked: false
 cardinality: 1

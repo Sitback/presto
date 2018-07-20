@@ -4,9 +4,10 @@ dependencies:
   config:
     - field.field.media.image.field_image
     - image.style.medium
-    - media_entity.bundle.image
+    - media.type.image
   module:
     - focal_point
+    - path
 id: media.image.default
 targetEntityType: media
 bundle: image
@@ -19,7 +20,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_image:
-    weight: 11
+    weight: 0
     settings:
       preview_image_style: medium
       preview_link: true
@@ -35,6 +36,19 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 100
+    region: content
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
