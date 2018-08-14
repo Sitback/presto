@@ -257,22 +257,9 @@ function presto_update_8001() {
   // Test if the fields to swap exist?
   $doUpdate = FALSE;
   while ($row = $query->fetchAssoc()) {
-    if (isset($row['revision_uid'], $row['revision_created'])) {
+    if (isset($row['revision_uid'])) {
       $doUpdate = TRUE;
     }
-  }
-  
-  if (!isset($row['revision_default'])) {
-    $revisionDefault = [
-      'type' => 'int',
-      'length' => 4,
-      'description' => '',
-      'unsigned' => FALSE,
-      'not null' => TRUE,
-    ];
-    $schema->addField('media_revision', 'revision_default', $revisionDefault);
-    
-    $queries[] = $connection->query('UPDATE media_revision set revision_default = 1');
   }
 
   If ($doUpdate) {
