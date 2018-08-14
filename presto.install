@@ -5,6 +5,7 @@
  * Install, update and uninstall functions for the presto installation profile.
  */
 
+use Drupal\Core\Database\Database;
 use Drupal\Core\Language\LanguageInterface;
 use Drupal\menu_link_content\Entity\MenuLinkContent;
 use Drupal\node\Entity\Node;
@@ -243,4 +244,109 @@ function presto_create_articles_page() {
     'expanded' => true,
   ]);
   $menuLink->save();
+}
+
+
+function presto_update_8001(&$sandbox) {
+  // Create new columns.
+  $revisionUser = [
+    'type' => 'INT',
+    'description' => 'The ID of the target entity.',
+    'length' => 10,
+    'default' => NULL,
+    'unsigned' => TRUE,
+  ];
+  $schema = Database::getConnection()->schema();
+  $schema->addField('media_revision', 'revision_user', $revisionUser);
+  
+  $revisionCreated = [
+    'type' => 'INT',
+    'description' => '',
+    'length' => 11,
+    'default' => NULL,
+  ];
+  $schema = Database::getConnection()->schema();
+  $schema->addField('media_revision', 'revision_created', $revisionCreated);
+  
+  $revisionLogMessage = [
+    'type' => 'LONGTEXT',
+    'description' => '',
+    'length' => 11,
+    'default' => NULL,
+  ];
+  $schema = Database::getConnection()->schema();
+  $schema->addField('media_revision', 'revision_log_message', $revisionLogMessage);
+  
+  // Copy the content from the old columns to the new columns.
+  
+  $query = Database::getConnection()->query('UPDATE media_revision SET revision_uid = revision_user');
+  $query->execute();
+  
+  $query = Database::getConnection()->query('UPDATE media_revision SET revision_timestamp = revision_created');
+  $query->execute();
+  
+  $query = Database::getConnection()->query('UPDATE media_revision SET revision_log = revision_log_message');
+  $query->execute();
+}
+
+
+/**
+ * Update table media_revision to finalize migration of media module.
+ */
+function presto_update_8002() {
+  $connection = Database::getConnection();
+  $schema = $connection->schema();
+  
+  $query = $connection->query('select * from media_revision');
+  // Test if the fields to swap exist?
+  $doUpdate = FALSE;
+  while ($row = $query->fetchAssoc()) {
+    if (isset($row['revision_uid'], $row['revision_created'])) {
+      $doUpdate = TRUE;
+      return;
+    }
+  }
+  
+  If ($doUpdate) {
+    // Create new columns.
+    $revisionUser = [
+      'description' => 'The ID of the target entity.',
+      'type' => 'int',
+      'length' => 10,
+      'unsigned' => TRUE,
+      'not null' => FALSE,
+    ];
+    $schema->addField('media_revision', 'revision_user', $revisionUser);
+    
+    $revisionCreated = [
+      'type' => 'int',
+      'length' => 11,
+      'description' => '',
+      'unsigned' => TRUE,
+      'not null' => FALSE,
+    ];
+    $schema->addField('media_revision', 'revision_created', $revisionCreated);
+    
+    $revisionLogMessage = [
+      'type' => 'text',
+      'size' => 'big',
+      'description' => '',
+      'unsigned' => FALSE,
+      'not null' => FALSE,
+    ];
+    $schema->addField('media_revision', 'revision_log_message', $revisionLogMessage);
+    
+    // Copy the content from the old columns to the new columns.
+    $queries[] = $connection->query('UPDATE media_revision SET revision_user = revision_uid');
+    $queries[] = $connection->query('UPDATE media_revision SET revision_created = revision_timestamp');
+    $queries[] = $connection->query('UPDATE media_revision SET revision_log_message = revision_log');
+    // Remove the old columns.
+    $queries[] = $connection->query('ALTER TABLE media_revision DROP revision_uid');
+    $queries[] = $connection->query('ALTER TABLE media_revision DROP revision_timestamp');
+    $queries[] = $connection->query('ALTER TABLE media_revision DROP revision_log');
+    
+    foreach ($queries as $q) {
+      $q->execute();
+    }
+  }
 }
