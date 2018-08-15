@@ -101,7 +101,7 @@ Process to follow:
    * /composer.lock
  * Update your composer.json with: "drupal/core": "8.*",
  * If you composer.json contains some reference using media_entity, please update the versions accordingly.
- * Run: `cd ..`, `composer require sitback/presto:dev-feature/media-core-adaptation-updates --update-with-all-dependencies`
+ * Run: `cd ..`, `composer require sitback/presto:8.x-2.x`
  * Run: `composer require drupal/media_entity_browser:2.0-alpha1`
  * Then run the update database again to find if there is some dependencies to fix, and disable or fix them.
  * Run `cd web`, `../vendor/bin/drush updb -y`
