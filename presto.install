@@ -252,17 +252,27 @@ function presto_create_articles_page() {
 function presto_update_8101() {
   $connection = Database::getConnection();
   $schema = $connection->schema();
-
+  
   $query = $connection->query('select * from media_revision');
-  // Test if the fields to swap exist?
-  $doUpdate = FALSE;
-  while ($row = $query->fetchAssoc()) {
-    if (isset($row['revision_uid'])) {
-      $doUpdate = TRUE;
-    }
+  
+  $row = $query->fetchAssoc();
+  
+  // Test if revision_default exist?
+  if (!array_key_exists('revision_default', $row)) {
+    $revisionDefault = [
+      'description' => '',
+      'type' => 'int',
+      'length' => 4,
+      'unsigned' => FALSE,
+      'not null' => TRUE,
+    ];
+    $schema->addField('media_revision', 'revision_default', $revisionDefault);
+    
+    $queries[] = $connection->query('UPDATE media_revision SET revision_default = 1');
   }
-
-  if ($doUpdate) {
+  
+  // Test if the fields to swap exist?
+  if (!array_key_exists('revision_uid', $row)) {
     // Create new columns.
     $revisionUser = [
       'description' => 'The ID of the target entity.',
@@ -272,7 +282,7 @@ function presto_update_8101() {
       'not null' => FALSE,
     ];
     $schema->addField('media_revision', 'revision_user', $revisionUser);
-
+    
     $revisionCreated = [
       'type' => 'int',
       'length' => 11,
@@ -281,7 +291,7 @@ function presto_update_8101() {
       'not null' => FALSE,
     ];
     $schema->addField('media_revision', 'revision_created', $revisionCreated);
-
+    
     $revisionLogMessage = [
       'type' => 'text',
       'size' => 'big',
@@ -290,7 +300,7 @@ function presto_update_8101() {
       'not null' => FALSE,
     ];
     $schema->addField('media_revision', 'revision_log_message', $revisionLogMessage);
-
+    
     // Copy the content from the old columns to the new columns.
     $queries[] = $connection->query('UPDATE media_revision SET revision_user = revision_uid');
     $queries[] = $connection->query('UPDATE media_revision SET revision_created = revision_timestamp');
@@ -299,7 +309,7 @@ function presto_update_8101() {
     $queries[] = $connection->query('ALTER TABLE media_revision DROP revision_uid');
     $queries[] = $connection->query('ALTER TABLE media_revision DROP revision_timestamp');
     $queries[] = $connection->query('ALTER TABLE media_revision DROP revision_log');
-
+    
     foreach ($queries as $q) {
       $q->execute();
     }
