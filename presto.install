@@ -249,7 +249,7 @@ function presto_create_articles_page() {
 /**
  * Update table media_revision to finalize migration of media module.
  */
-function presto_update_8001() {
+function presto_update_8101() {
   $connection = Database::getConnection();
   $schema = $connection->schema();
 
