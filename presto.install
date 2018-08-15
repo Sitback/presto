@@ -262,7 +262,7 @@ function presto_update_8101() {
     }
   }
 
-  If ($doUpdate) {
+  if ($doUpdate) {
     // Create new columns.
     $revisionUser = [
       'description' => 'The ID of the target entity.',
