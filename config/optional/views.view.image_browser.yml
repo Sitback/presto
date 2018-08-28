@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - image.style.slick_media
-    - media_entity.bundle.image
+    - media.type.image
   module:
     - entity_browser
     - image

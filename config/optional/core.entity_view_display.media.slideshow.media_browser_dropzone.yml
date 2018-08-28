@@ -4,7 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.media.media_browser_dropzone
     - field.field.media.slideshow.field_media_images
-    - media_entity.bundle.slideshow
+    - media.type.slideshow
   module:
     - ds
     - slick_media

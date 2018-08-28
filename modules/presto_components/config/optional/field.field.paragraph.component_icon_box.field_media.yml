@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_media
-    - media_entity.bundle.image
+    - media.type.image
     - paragraphs.paragraphs_type.component_icon_box
 id: paragraph.component_icon_box.field_media
 field_name: field_media
