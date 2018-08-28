@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 8.x-2.2 (1.2.2)
+* Updated composer dependencies
+
 ## 8.x-2.1 (1.2.1)
 * Updated config to use core Media module
 * Tested with Drupal 8.5.6
