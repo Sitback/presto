@@ -16,14 +16,16 @@ bundle: component_image
 mode: default
 content:
   field_caption:
-    weight: 1
+    type: basic_string
+    weight: 0
+    region: content
     label: inline
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
-    region: content
   field_link:
-    weight: 2
+    type: link
+    weight: 1
+    region: content
     label: inline
     settings:
       trim_length: 80
@@ -32,10 +34,8 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
-    region: content
   field_media:
-    weight: 4
+    weight: 3
     label: hidden
     settings:
       link: true
@@ -44,10 +44,10 @@ content:
     type: entity_reference_entity_view
     region: content
   field_variation:
-    weight: 3
+    type: list_default
+    weight: 2
+    region: content
     label: inline
     settings: {  }
     third_party_settings: {  }
-    type: list_default
-    region: content
 hidden: {  }

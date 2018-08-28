@@ -87,3 +87,24 @@ Enabling eCommerce installs the following contributed modules:
 ## Known Issues
 
 * If you embed a block with a form in it onto a node, via the _Component: Block_ Paragraph type, it may break the `node/edit` page for that node. We're monitoring an ongoing issue in the `block_field` module that should resolve this. ([#42](Sitback/presto#42))
+
+## Migration from drupal 8.4.X to 8.5.x and media.
+
+Process to follow:
+ * Ensure your site is up to date: `cd web`, `../vendor/bin/drush updb`
+ * Remove folders:
+   * /vendor
+   * /web/core
+   * /web/modules/contrib
+   * /composer.lock
+ * Update your composer.json with: "drupal/core": "8.*",
+ * If you composer.json contains some reference using media_entity, please update the versions accordingly.
+ * Run: `cd ..`, `composer require sitback/presto:8.x-2.x`
+ * Run: `composer require drupal/media_entity_browser:2.0-alpha1`
+ * Then run the update database again to find if there is some dependencies to fix, and disable or fix them.
+ * Run `cd web`, `../vendor/bin/drush updb -y`
+ * Run `cd ..`, `composer require drupal/media_entity:2.0-alpha1`
+ * Run `cd web`, `../vendor/bin/drush en media -y`
+ * Run `../vendor/bin/drush updb -y`
+ * Run `../vendor/bin/drush cr`
+ * Your site should be up and running again.

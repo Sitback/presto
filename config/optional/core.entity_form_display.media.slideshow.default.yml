@@ -7,6 +7,7 @@ dependencies:
     - media.type.slideshow
   module:
     - entity_browser
+    - path
 id: media.slideshow.default
 targetEntityType: media
 bundle: slideshow
@@ -19,16 +20,17 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_media_images:
-    weight: 11
+    weight: 0
     settings:
       entity_browser: media_browser_dropzone
       field_widget_display: rendered_entity
       field_widget_edit: true
       field_widget_remove: true
+      open: true
       selection_mode: selection_append
       field_widget_display_settings:
         view_mode: media_browser
-      open: true
+      field_widget_replace: false
     third_party_settings: {  }
     type: entity_browser_entity_reference
     region: content
@@ -39,6 +41,19 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 100
+    region: content
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete

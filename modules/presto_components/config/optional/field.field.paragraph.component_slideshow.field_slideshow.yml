@@ -11,7 +11,7 @@ entity_type: paragraph
 bundle: component_slideshow
 label: Slideshow
 description: 'To create a slideshow, please go to Content > Media > Add new media > Slideshow'
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

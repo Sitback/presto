@@ -4,7 +4,6 @@ dependencies:
   config:
     - views.view.media_browser
   module:
-    - media_entity_image
     - views
 name: media_browser
 label: 'Media Browser'
@@ -19,24 +18,24 @@ selection_display_configuration: {  }
 widget_selector: tabs
 widget_selector_configuration: {  }
 widgets:
-  79a442f9-623f-4dc0-8c32-b4244c7ce6d9:
+  c9b7a0d9-b3f0-4576-941b-76d5bfc94a0d:
     settings:
       extensions: 'jpg jpeg png gif'
-      media_bundle: image
+      media_type: image
       upload_location: 'public://'
       multiple: '1'
       submit_text: 'Select files'
-    uuid: 79a442f9-623f-4dc0-8c32-b4244c7ce6d9
+    uuid: c9b7a0d9-b3f0-4576-941b-76d5bfc94a0d
     weight: 1
     label: 'Upload Image Media'
-    id: media_entity_image_upload
-  b4f506eb-bec9-47a2-ac13-78d87a912cb4:
+    id: media_image_upload
+  2c3d734b-4ff7-4bc0-b8cb-435941a24f2e:
     settings:
       view: media_browser
       view_display: entity_browser_1
       submit_text: 'Select entities'
       auto_select: false
-    uuid: b4f506eb-bec9-47a2-ac13-78d87a912cb4
+    uuid: 2c3d734b-4ff7-4bc0-b8cb-435941a24f2e
     weight: 2
     label: 'Media Browser'
     id: view

@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.component_icon_box_list.field_icon_box
+    - paragraphs.paragraphs_type.component_icon_box_list
+  module:
+    - ds
+    - entity_reference_revisions
+_core:
+  default_config_hash: QDZmTvAMxR_a_k0BBFz1RhMlBf3Xc_xIfQdSxdLWBLk
+id: paragraph.component_icon_box_list.preview
+targetEntityType: paragraph
+bundle: component_icon_box_list
+mode: preview
+content:
+  field_icon_box:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: preview
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    region: content
+hidden: {  }
