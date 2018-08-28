@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 8.x-2.1 (1.2.1)
+* Updated config to use core Media module
+* Tested with Drupal 8.5.6
+
 ## 8.x-2.0 (1.2.0)
 * Updated colour palette
 * Updated logo

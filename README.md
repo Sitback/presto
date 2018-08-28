@@ -16,8 +16,6 @@ You can also [download a pre-packaged tarball off drupal.org](https://www.drupal
 
 ## Included in Presto
 
-~~You can demo most of the below functionality on our demo site~~ (coming soon!). In the meantime, [you can spin up a new free instance on simplytest.me](https://simplytest.me/project/presto) (this does not include eCommerce due to the limitations outlined above).
-
 Presto includes the following functionality pre-configured and ready to use right out-of-the-box:
 
 * An _Article_ content type with some pre-configured fields
@@ -43,7 +41,7 @@ Presto includes the following functionality pre-configured and ready to use righ
 * Canonical redirect functionality
   - e.g. if you add an alias to _node:1_, users accessing `/node/1` will be redirected to the alias
 * XML sitemap generation
-* ~~A shiny, magical theme, based off Bootstrap 3~~ (coming soon!)
+* A shiny, magical theme, based off Bootstrap 4
 * Optional, pre-configured eCommerce functionality, via Drupal Commerce.
   - See the [eCommerce](#ecommerce) section for full details.
 
