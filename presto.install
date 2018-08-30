@@ -253,12 +253,8 @@ function presto_update_8101() {
   $connection = Database::getConnection();
   $schema = $connection->schema();
   
-  $query = $connection->query('select * from media_revision');
-  
-  $row = $query->fetchAssoc();
-  
   // Test if revision_default exist?
-  if (!array_key_exists('revision_default', $row)) {
+  if (!$schema->fieldExists('media_revision', 'revision_default')) {
     $revisionDefault = [
       'description' => '',
       'type' => 'int',
@@ -272,7 +268,7 @@ function presto_update_8101() {
   }
   
   // Test if the fields to swap exist?
-  if (!array_key_exists('revision_uid', $row)) {
+  if ($schema->fieldExists('media_revision', 'revision_uid')) {
     // Create new columns.
     $revisionUser = [
       'description' => 'The ID of the target entity.',
